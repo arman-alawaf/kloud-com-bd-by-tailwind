@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kloud Technologies</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Navbar background change on scroll
+    window.addEventListener("scroll", function () {
+      const nav = document.getElementById("navbar");
+      if (window.scrollY > 50) {
+        nav.classList.add("bg-white", "shadow-md");
+        nav.classList.remove("bg-transparent");
+      } else {
+        nav.classList.remove("bg-white", "shadow-md");
+        nav.classList.add("bg-transparent");
+      }
+    });
+  </script>
+</head>
+<body class="font-sans">
+
+  <!-- Topbar -->
+  <div class="bg-blue-600 text-white text-sm py-2 px-4 flex justify-between items-center">
+    <span>📞 09649-161216</span>
+    <div class="space-x-2">
+      <button class="bg-orange-500 px-3 py-1 rounded-md">Offers Today</button>
+      <button class="bg-white text-blue-600 px-3 py-1 rounded-md">Quick Pay</button>
+      <button class="bg-gray-100 text-blue-600 px-3 py-1 rounded-md">Self Care</button>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav id="navbar" class="fixed w-full top-0 left-0 z-50 bg-transparent transition duration-300">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+      <div class="flex items-center">
+        <img src="https://dummyimage.com/120x40/3b82f6/ffffff&text=LOGO" alt="Logo" class="h-10">
+      </div>
+      <ul class="hidden md:flex space-x-6 text-gray-800 font-medium">
+        <li><a href="#" class="hover:text-blue-600">Home</a></li>
+        <li><a href="#" class="hover:text-blue-600">Packages</a></li>
+        <li><a href="#" class="hover:text-blue-600">Business</a></li>
+        <li><a href="#" class="hover:text-blue-600">About Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero / Slider -->
+  <section class="h-screen w-full bg-cover bg-center flex items-center justify-center text-white" 
+    style="background-image: url('https://picsum.photos/1920/1080');">
+    <h1 class="text-4xl md:text-6xl font-bold bg-black/40 px-6 py-3 rounded-lg">Experience the Next Level</h1>
+  </section>
+
+  <!-- Packages Section -->
+  <section class="max-w-7xl mx-auto px-6 py-16">
+    <div class="flex justify-center space-x-4 mb-8">
+      <button id="tab1" class="tab-btn px-6 py-2 rounded-full bg-blue-600 text-white">Regular</button>
+      <button id="tab2" class="tab-btn px-6 py-2 rounded-full bg-gray-200 text-gray-700">SME</button>
+    </div>
+
+    <!-- Package Cards -->
+    <div id="packages" class="grid md:grid-cols-3 gap-8">
+      <!-- Card 1 -->
+      <div class="p-6 rounded-2xl bg-gradient-to-r from-purple-500 to-indigo-500 text-white shadow-lg">
+        <h2 class="text-2xl font-bold mb-2">Kloud Mini</h2>
+        <p class="text-4xl font-bold">35 Mbps</p>
+        <ul class="mt-4 space-y-2 text-sm">
+          <li>✔ Bufferless Browsing</li>
+          <li>✔ 24/7 Support</li>
+          <li>✔ Free Installation</li>
+        </ul>
+        <p class="mt-4 text-lg">BDT 699 / month</p>
+        <button class="mt-4 bg-white text-purple-600 font-semibold px-4 py-2 rounded-lg">Select Package</button>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="p-6 rounded-2xl bg-gradient-to-r from-blue-500 to-cyan-500 text-white shadow-lg">
+        <h2 class="text-2xl font-bold mb-2">Kloud Neo</h2>
+        <p class="text-4xl font-bold">55 Mbps</p>
+        <ul class="mt-4 space-y-2 text-sm">
+          <li>✔ Low Latency Gaming</li>
+          <li>✔ 24/7 Support</li>
+          <li>✔ Free Installation</li>
+        </ul>
+        <p class="mt-4 text-lg">BDT 999 / month</p>
+        <button class="mt-4 bg-white text-blue-600 font-semibold px-4 py-2 rounded-lg">Select Package</button>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="p-6 rounded-2xl bg-gradient-to-r from-pink-500 to-red-500 text-white shadow-lg">
+        <h2 class="text-2xl font-bold mb-2">Kloud Stream</h2>
+        <p class="text-4xl font-bold">45 Mbps</p>
+        <ul class="mt-4 space-y-2 text-sm">
+          <li>✔ Streaming + BDX</li>
+          <li>✔ 24/7 Support</li>
+          <li>✔ Free Installation</li>
+        </ul>
+        <p class="mt-4 text-lg">BDT 899 / month</p>
+        <button class="mt-4 bg-white text-red-600 font-semibold px-4 py-2 rounded-lg">Select Package</button>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Tab Switcher
+    const tab1 = document.getElementById("tab1");
+    const tab2 = document.getElementById("tab2");
+
+    tab1.addEventListener("click", () => {
+      tab1.classList.add("bg-blue-600", "text-white");
+      tab1.classList.remove("bg-gray-200", "text-gray-700");
+      tab2.classList.remove("bg-blue-600", "text-white");
+      tab2.classList.add("bg-gray-200", "text-gray-700");
+    });
+
+    tab2.addEventListener("click", () => {
+      tab2.classList.add("bg-blue-600", "text-white");
+      tab2.classList.remove("bg-gray-200", "text-gray-700");
+      tab1.classList.remove("bg-blue-600", "text-white");
+      tab1.classList.add("bg-gray-200", "text-gray-700");
+    });
+  </script>
+
+</body>
+</html>

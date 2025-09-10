@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Tailwind</title>
+
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/brands.min.css" integrity="sha512-WxpJXPm/Is1a/dzEdhdaoajpgizHQimaLGL/QqUIAjIihlQqlPQb1V9vkGs9+VzXD7rgI6O+UsSKl4u5K36Ydw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/fontawesome.min.css" integrity="sha512-M5Kq4YVQrjg5c2wsZSn27Dkfm/2ALfxmun0vUE3mPiJyK53hQBHYCVAtvMYEC7ZXmYLg8DVG4tF8gD27WmDbsg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/regular.min.css" integrity="sha512-x3gns+l9p4mIK7vYLOCUoFS2P1gavFvnO9Its8sr0AkUk46bgf9R51D8xeRUwCSk+W93YbXWi19BYzXDNBH5SA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/solid.min.css" integrity="sha512-EHa6vH03/Ty92WahM0/tet1Qicl76zihDCkBnFhN3kFGQkC+mc86d7V+6y2ypiLbk3h0beZAGdUpzfMcb06cMg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Titillium+Web:wght@400;700&family=Lato:wght@800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --color1: #007DB2;
+    }
+  </style>
+
+  <!-- Swiper.js CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              red1: "red",
+            },
+            fontSize: {
+              size77: "77px",
+            },
+          },
+        },
+      };
+    </script>
+
+  </head>
+  <body class="font-sans">
+
+  <div class="p-20 max-w-sm w-full rounded-xl shadow-lg bg-gradient-to-t from-[#6A54A3]/80 to-[#007DB2]/80 text-white p-6">
+    
+    <!-- Header Section -->
+    <div class="bg-white rounded-[34px] px-6 py-4 text-center mb-6">
+      <h2 class="text-[#4A0379] text-3xl font-roboto">Kloud Neo</h2>
+      <p class="text-[#4A0379] text-5xl font-bold font-titillium">55Mbps</p>
+    </div>
+
+    <!-- Benefits Section -->
+    <div class="bg-white/70 rounded-lg px-6 py-4 mb-6">
+      <h3 class="text-[#4A0379] text-xl font-extrabold mb-4">Premium Benefits</h3>
+      
+      <ul class="space-y-3">
+        <li class="flex items-start gap-3">
+          <div class="w-6 h-6 bg-[#4A0379] rounded-full flex items-center justify-center">
+            ✅
+          </div>
+          <span class="text-[#290131] text-base">Including Kloud Mini & Stream</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <div class="w-6 h-6 bg-[#4A0379] rounded-full flex items-center justify-center">
+            ✅
+          </div>
+          <span class="text-[#290131] text-base">Bufferless Streaming Site</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <div class="w-6 h-6 bg-[#4A0379] rounded-full flex items-center justify-center">
+            ✅
+          </div>
+          <span class="text-[#290131] text-base">Low Latency Popular Games</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <div class="w-6 h-6 bg-[#4A0379] rounded-full flex items-center justify-center">
+            ✅
+          </div>
+          <span class="text-[#290131] text-base">24/7 Customer Support</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <img src="https://cdn-icons-png.flaticon.com/512/758/758443.png" alt="Rocket Icon" class="w-6 h-6">
+          <span class="text-[#290131] text-base">Free Installation</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Pricing -->
+    <div class="text-center mb-2">
+      <p class="text-4xl font-light font-titillium leading-tight text-shadow-md">BDT 999<br/><span class="text-xl">Per Month</span></p>
+      <p class="text-sm mt-1 text-white opacity-80 italic">*excluding vat</p>
+    </div>
+
+    <!-- Button -->
+    <div class="mt-6 text-center">
+      <button class="bg-white text-[#27067B] font-bold px-6 py-3 rounded-full border-2 border-[#007DB2] shadow hover:bg-blue-100 transition-all">
+        Select this Package
+      </button>
+    </div>
+  </div>
+
+
+  
+  </body>
+</html>

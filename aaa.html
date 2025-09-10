@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>KTL ISP Website</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-sans bg-gray-50">
+
+  <!-- Top Contact Bar -->
+  <div class="w-full bg-[#0099DC] text-white text-sm">
+    <div class="max-w-7xl mx-auto flex justify-end items-center px-4 py-2 space-x-2">
+      <img src="Call-ICON-White.png" alt="Call" class="w-5 h-5">
+      <span class="font-bold text-lg">09649-161216</span>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="w-full bg-white/80 shadow-md">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-4">
+      
+      <!-- Logo -->
+      <div class="flex items-center space-x-2">
+        <img src="KTL-Logo" alt="KTL Logo" class="h-10 md:h-12">
+      </div>
+
+      <!-- Menu for Desktop -->
+      <nav class="hidden md:flex space-x-8 text-lg font-normal text-black/85">
+        <a href="#" class="hover:text-[#0099DC]">Home</a>
+        <a href="#" class="hover:text-[#0099DC]">Packages</a>
+        <a href="#" class="hover:text-[#0099DC]">Business</a>
+        <a href="#" class="hover:text-[#0099DC]">About Us</a>
+        <a href="#" class="font-semibold bg-gradient-to-r from-[#FFA800] to-[#E73700] bg-clip-text text-transparent">Offers Today</a>
+      </nav>
+
+      <!-- Buttons -->
+      <div class="hidden md:flex space-x-4">
+        <a href="#" class="bg-[#69046E] px-5 py-2 rounded-xl text-white font-bold">Quick Pay</a>
+        <a href="#" class="bg-[#69046E] px-5 py-2 rounded-xl text-white font-bold">Self Care</a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <div class="md:hidden">
+        <button id="menuBtn" class="text-[#69046E] text-2xl">☰</button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div id="mobileMenu" class="hidden md:hidden flex flex-col items-center space-y-4 py-4 bg-white">
+      <a href="#" class="hover:text-[#0099DC]">Home</a>
+      <a href="#" class="hover:text-[#0099DC]">Packages</a>
+      <a href="#" class="hover:text-[#0099DC]">Business</a>
+      <a href="#" class="hover:text-[#0099DC]">About Us</a>
+      <a href="#" class="font-semibold bg-gradient-to-r from-[#FFA800] to-[#E73700] bg-clip-text text-transparent">Offers Today</a>
+      <a href="#" class="bg-[#69046E] px-5 py-2 rounded-xl text-white font-bold">Quick Pay</a>
+      <a href="#" class="bg-[#69046E] px-5 py-2 rounded-xl text-white font-bold">Self Care</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative w-full h-[60vh] md:h-[80vh] flex items-center justify-center bg-cover bg-center shadow-lg"
+           style="background-image: url('Home-Screen');">
+    <h1 class="text-2xl md:text-4xl lg:text-5xl text-white font-semibold text-center max-w-3xl drop-shadow-lg px-4">
+      Experience the Next Level of Connectivity
+    </h1>
+
+    <!-- Dots -->
+    <div class="absolute bottom-6 flex space-x-3">
+      <span class="w-3 h-3 rounded-full bg-gray-300/70"></span>
+      <span class="w-3 h-3 rounded-full bg-gray-300/70"></span>
+      <span class="w-3 h-3 rounded-full bg-gray-300/70"></span>
+      <span class="w-3 h-3 rounded-full bg-gray-300/70"></span>
+      <span class="w-3 h-3 rounded-full bg-gray-300/70"></span>
+      <span class="w-3 h-3 rounded-full bg-gray-300/70"></span>
+      <span class="w-3 h-3 rounded-full bg-gray-300/70"></span>
+      <span class="w-3 h-3 rounded-full bg-gray-300/70"></span>
+    </div>
+  </section>
+
+<section class="packages-section">
+    
+  <style>
+    body {
+      font-family: 'Titillium Web', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9ff;
+      color: #200072;
+    }
+
+    .packages-section {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .packages-section h2 {
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: #4A0379;
+      margin-bottom: 20px;
+    }
+
+    .packages-section p {
+      font-size: 1.1rem;
+      max-width: 900px;
+      margin: 0 auto 40px;
+      line-height: 1.6;
+      letter-spacing: 0.03em;
+    }
+
+    .packages-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .package-card {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      padding: 30px 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .package-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .package-card h3 {
+      font-size: 1.5rem;
+      color: #4A0379;
+      margin-bottom: 10px;
+    }
+
+    .package-speed {
+      font-size: 2rem;
+      font-weight: bold;
+      margin: 10px 0;
+      color: #200072;
+    }
+
+    .benefits {
+      text-align: left;
+      margin: 15px 0;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .price {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin: 15px 0;
+      color: #200072;
+    }
+
+    .vat-note {
+      font-size: 0.8rem;
+      color: gray;
+      margin-bottom: 15px;
+    }
+
+    .select-btn {
+      display: inline-block;
+      background: #4A0379;
+      color: #fff;
+      padding: 10px 25px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: background 0.3s;
+    }
+
+    .select-btn:hover {
+      background: #200072;
+    }
+
+    @media (max-width: 768px) {
+      .packages-section h2 {
+        font-size: 2rem;
+      }
+      .package-speed {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+  <h2>Kloud Home Packages</h2>
+  <p>
+    Kloud Technologies Limited is dedicated to providing Bangladesh with premium internet 
+    solutions tailored for both residential and commercial users. With a focus on speed, 
+    reliability, and modern technology & 24/7 Support.
+  </p>
+
+  <div class="packages-container">
+    <!-- Package 1 -->
+    <div class="package-card">
+      <h3>Kloud Mini</h3>
+      <div class="package-speed">35 Mbps</div>
+      <div class="benefits">
+        <p>✔ Premium Benefits</p>
+        <p>✔ Bufferless Browsing</p>
+        <p>✔ Content Server (KloudNix, BDIX)</p>
+        <p>✔ 24/7 Customer Support</p>
+        <p>✔ Free Installation</p>
+      </div>
+      <div class="price">BDT 699 / Month</div>
+      <div class="vat-note">*excluding VAT</div>
+      <a href="#" class="select-btn">Select this Package</a>
+    </div>
+
+    <!-- Package 2 -->
+    <div class="package-card">
+      <h3>Kloud Stream</h3>
+      <div class="package-speed">45 Mbps</div>
+      <div class="benefits">
+        <p>✔ Premium Benefits</p>
+        <p>✔ Bufferless Browsing</p>
+        <p>✔ Bufferless Streaming Site</p>
+        <p>✔ Highspeed - KloudNix & BDIX</p>
+        <p>✔ 24/7 Customer Support</p>
+        <p>✔ Free Installation</p>
+      </div>
+      <div class="price">BDT 899 / Month</div>
+      <div class="vat-note">*excluding VAT</div>
+      <a href="#" class="select-btn">Select this Package</a>
+    </div>
+
+    <!-- Package 3 -->
+    <div class="package-card">
+      <h3>Kloud Neo</h3>
+      <div class="package-speed">55 Mbps</div>
+      <div class="benefits">
+        <p>✔ Premium Benefits</p>
+        <p>✔ Low Latency Popular Games</p>
+        <p>✔ 4k Streaming</p>
+        <p>✔ IPV6 Available</p>
+        <p>✔ 24/7 Customer Support</p>
+        <p>✔ Free Installation</p>
+      </div>
+      <div class="price">BDT 999 / Month</div>
+      <div class="vat-note">*excluding VAT</div>
+      <a href="#" class="select-btn">Select this Package</a>
+    </div>
+  </div>
+</section>
+
+
+  <script>
+    // Mobile menu toggle
+    document.getElementById('menuBtn').addEventListener('click', () => {
+      document.getElementById('mobileMenu').classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
