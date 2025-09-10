@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Tailwind</title>
+    <title>Kloud</title>
 
 
     <!-- Font Awesome CDN -->
@@ -19,6 +19,7 @@
   <style>
     :root {
       --color1: #007DB2;
+      /* --color1: red; */
     }
   </style>
 
@@ -49,22 +50,20 @@
   <body class="font-sans">
 
 
-<section class="h-screen w-full">
+<!-- <section class="h-screen w-full">
   <div class="w-[300px] h-[300px] bg-[linear-gradient(to_bottom,rgba(106,84,163,0.83),rgba(0,125,178,0.83))]"></div>
 </section>
 <section class="h-screen w-full">a</section>
-<section class="h-screen w-full">a</section>
+<section class="h-screen w-full">a</section> -->
 
 
 
 
 
     <!-- Top bar -->
-    <div class="bg-[#007bbd] text-white text-sm flex justify-end items-center px-6 py-2">
+    <div class="bg-[var(--color1)] text-white text-sm flex justify-end items-center px-6 py-2">
       <span class="flex items-center gap-2">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h2l3.6 7.59-1.35 2.44C6.52 16.37 7.48 18 9 18h9a1 1 0 001-1v-1H9.42c-.14 0-.25-.11-.25-.25l.03-.12L10.1 13h7.45a1 1 0 00.92-.62l3.24-7.24A1 1 0 0020.8 4H6.21l-.94-2H1" />
-        </svg>
+        <i class="fa-solid fa-phone"></i>
         09649-161216
       </span>
     </div>
@@ -79,7 +78,8 @@
 
 
     <!-- Navbar -->
-    <nav class="bg-white shadow">
+    <nav class="bg-white shadow sticky top-0 z-50">
+
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center py-3">
 
@@ -91,10 +91,10 @@
 
           <!-- Desktop Menu -->
           <ul class="hidden md:flex space-x-6 text-gray-800 font-medium">
-            <li><a href="#" class="hover:text-[#007bbd]">Home</a></li>
-            <li><a href="#" class="hover:text-[#007bbd]">Packages</a></li>
-            <li><a href="#" class="hover:text-[#007bbd]">Business</a></li>
-            <li><a href="#" class="hover:text-[#007bbd]">About Us</a></li>
+            <li><a href="#" class="hover:text-[var(--color1)]">Home</a></li>
+            <li><a href="#" class="hover:text-[var(--color1)]">Packages</a></li>
+            <li><a href="#" class="hover:text-[var(--color1)]">Business</a></li>
+            <li><a href="#" class="hover:text-[var(--color1)]">About Us</a></li>
             <li>
               <a href="#" class="text-orange-600 flex items-center gap-1">
                 <span>🔥</span> Offers Today
@@ -104,8 +104,8 @@
 
           <!-- Buttons (desktop) -->
           <div class="hidden md:flex space-x-3">
-            <a href="#" class="bg-[#007bbd] text-white px-4 py-2 rounded-lg font-semibold hover:bg-[#005f91]">Quick Pay</a>
-            <a href="#" class="bg-[#007bbd] text-white px-4 py-2 rounded-lg font-semibold hover:bg-[#005f91]">Self Care</a>
+            <a href="#" class="bg-[var(--color1)] text-white px-4 py-2 rounded-lg font-semibold hover:bg-[#005f91]">Quick Pay</a>
+            <a href="#" class="bg-[var(--color1)] text-white px-4 py-2 rounded-lg font-semibold hover:bg-[#005f91]">Self Care</a>
           </div>
 
           <!-- Mobile Hamburger -->
@@ -122,16 +122,17 @@
 
       <!-- Mobile Menu (hidden by default) -->
       <div id="mobile-menu" class="hidden md:hidden px-4 pb-4 space-y-3">
-        <a href="#" class="block text-gray-800 font-medium hover:text-[#007bbd]">Home</a>
-        <a href="#" class="block text-gray-800 font-medium hover:text-[#007bbd]">Packages</a>
-        <a href="#" class="block text-gray-800 font-medium hover:text-[#007bbd]">Business</a>
-        <a href="#" class="block text-gray-800 font-medium hover:text-[#007bbd]">About Us</a>
+        <a href="#" class="block text-gray-800 font-medium hover:text-[var(--color1)]">Home</a>
+        <a href="#" class="block text-gray-800 font-medium hover:text-[var(--color1)]">Packages</a>
+        <a href="#" class="block text-gray-800 font-medium hover:text-[var(--color1)]">Business</a>
+        <a href="#" class="block text-gray-800 font-medium hover:text-[var(--color1)]">About Us</a>
         <a href="#" class="block text-orange-600 font-medium">🔥 Offers Today</a>
         <div class="flex flex-col gap-2 pt-2">
-          <a href="#" class="bg-[#007bbd] text-white px-4 py-2 rounded-lg font-semibold text-center hover:bg-[#005f91]">Quick Pay</a>
-          <a href="#" class="bg-[#007bbd] text-white px-4 py-2 rounded-lg font-semibold text-center hover:bg-[#005f91]">Self Care</a>
+          <a href="#" class="bg-[var(--color1)] text-white px-4 py-2 rounded-lg font-semibold text-center hover:bg-[#005f91]">Quick Pay</a>
+          <a href="#" class="bg-[var(--color1)] text-white px-4 py-2 rounded-lg font-semibold text-center hover:bg-[#005f91]">Self Care</a>
         </div>
       </div>
+
     </nav>
     <script>
       // Mobile menu toggle
@@ -227,13 +228,13 @@
 
   <!-- Toggle Tabs (Regular / SME) -->
   <div class="flex justify-center my-10">
-    <div class="p-1 relative inline-flex rounded-full border-[3px] border-[#0077b6] overflow-hidden text-[#0077b6] font-bold text-lg">
+    <div class="p-1 relative inline-flex rounded-full border-[3px] border-[var(--color1)] overflow-hidden text-[var(--color1)] font-bold text-lg">
 
       <!-- Regular Button -->
       <button
         id="tab-regular"
         onclick="showTab('regular')"
-        class="bg-[#0077b6] text-white px-8 py-2 rounded-full transition-all duration-200"
+        class="bg-[var(--color1)] text-white px-8 py-2 rounded-full transition-all duration-200"
       >
         Regular
       </button>
@@ -242,7 +243,7 @@
       <button
         id="tab-sme"
         onclick="showTab('sme')"
-        class="bg-white text-[#0077b6] px-8 py-2 rounded-full transition-all duration-200"
+        class="bg-white text-[var(--color1)] px-8 py-2 rounded-full transition-all duration-200"
       >
         SME
       </button>
@@ -273,7 +274,7 @@
         <p class="text-3xl font-light font-titillium text-gray-800">BDT 699<br><span class="text-base">Per Month</span></p>
         <p class="text-xs text-gray-600 italic mt-1">*excluding vat</p>
       </div>
-      <button class="mt-2 bg-white text-blue-700 font-bold px-6 py-2 rounded-full border-2 border-blue-500 hover:bg-blue-100 transition-all">
+      <button class="mt-2 bg-white text-[var(--color1)] hover:text-white font-bold px-6 py-2 rounded-full border-2 border-[var(--color1)] hover:border-white hover:bg-[var(--color1)] transition-all">
         Select this Package
       </button>
     </div>
@@ -298,7 +299,7 @@
         <p class="text-3xl font-light font-titillium text-white">BDT 999<br><span class="text-base">Per Month</span></p>
         <p class="text-xs text-white italic mt-1">*excluding vat</p>
       </div>
-      <button class="mt-2 bg-white text-blue-700 font-bold px-6 py-2 rounded-full border-2 border-blue-500 hover:bg-blue-100 transition-all">
+      <button class="mt-2 bg-white text-[var(--color1)] hover:text-white font-bold px-6 py-2 rounded-full border-2 border-[var(--color1)] hover:border-white hover:bg-[var(--color1)] transition-all">
         Select this Package
       </button>
     </div>
@@ -323,7 +324,7 @@
         <p class="text-3xl font-light font-titillium text-gray-800">BDT 899<br><span class="text-base">Per Month</span></p>
         <p class="text-xs text-gray-600 italic mt-1">*excluding vat</p>
       </div>
-      <button class="mt-2 bg-white text-blue-700 font-bold px-6 py-2 rounded-full border-2 border-blue-500 hover:bg-blue-100 transition-all">
+      <button class="mt-2 bg-white text-[var(--color1)] hover:text-white font-bold px-6 py-2 rounded-full border-2 border-[var(--color1)] hover:border-white hover:bg-[var(--color1)] transition-all">
         Select this Package
       </button>
     </div>
@@ -345,15 +346,15 @@
       const smeBtn = document.getElementById('tab-sme');
 
       if (tab === 'regular') {
-        regularBtn.classList.add('bg-[#0077b6]', 'text-white');
-        regularBtn.classList.remove('bg-white', 'text-[#0077b6]');
-        smeBtn.classList.add('bg-white', 'text-[#0077b6]');
-        smeBtn.classList.remove('bg-[#0077b6]', 'text-white');
+        regularBtn.classList.add('bg-[var(--color1)]', 'text-white');
+        regularBtn.classList.remove('bg-white', 'text-[var(--color1)]');
+        smeBtn.classList.add('bg-white', 'text-[var(--color1)]');
+        smeBtn.classList.remove('bg-[var(--color1)]', 'text-white');
       } else {
-        smeBtn.classList.add('bg-[#0077b6]', 'text-white');
-        smeBtn.classList.remove('bg-white', 'text-[#0077b6]');
-        regularBtn.classList.add('bg-white', 'text-[#0077b6]');
-        regularBtn.classList.remove('bg-[#0077b6]', 'text-white');
+        smeBtn.classList.add('bg-[var(--color1)]', 'text-white');
+        smeBtn.classList.remove('bg-white', 'text-[var(--color1)]');
+        regularBtn.classList.add('bg-white', 'text-[var(--color1)]');
+        regularBtn.classList.remove('bg-[var(--color1)]', 'text-white');
       }
 
       // Optional: toggle tab content
@@ -397,7 +398,7 @@
 
         <!-- Start Button -->
         <button 
-          class="bg-white text-blue-600 font-bold px-6 py-2 rounded-full shadow-lg hover:bg-blue-100 transition"
+          class="bg-white text-[var(--color1)] font-bold px-6 py-2 rounded-full shadow-lg hover:bg-blue-100 transition"
         >
           Start
         </button>
@@ -408,13 +409,13 @@
 
 
 
-  <section class="py-20 max-w-7xl mx-auto grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+  <!-- <section class="py-20 max-w-7xl mx-auto grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
     <style>
       .text-shadow-md {
         text-shadow: -3px 4px 5px rgba(0, 0, 0, 0.25);
       }
     </style>
-    <!-- Kloud Mini -->
+
     <div class="rounded-xl shadow-lg bg-gradient-to-t from-[#99C6E8]/90 to-[#C0E4F9]/90 text-white p-6 flex flex-col items-center">
       <div class="bg-white rounded-[34px] px-6 py-4 text-center mb-6 w-full">
         <h2 class="text-[#4A0379] text-2xl font-roboto">Kloud Mini</h2>
@@ -439,7 +440,7 @@
       </button>
     </div>
 
-    <!-- Kloud Neo (Center Highlighted Card) -->
+
     <div class="rounded-xl shadow-lg bg-gradient-to-t from-[#6A54A3]/80 to-[#007DB2]/80 text-white p-6 flex flex-col items-center scale-105">
       <div class="bg-white rounded-[34px] px-6 py-4 text-center mb-6 w-full">
         <h2 class="text-[#4A0379] text-2xl font-roboto">Kloud Neo</h2>
@@ -464,7 +465,6 @@
       </button>
     </div>
 
-    <!-- Kloud Stream -->
     <div class="rounded-xl shadow-lg bg-gradient-to-t from-[#99C6E8]/90 to-[#C0E4F9]/90 text-white p-6 flex flex-col items-center">
       <div class="bg-white rounded-[34px] px-6 py-4 text-center mb-6 w-full">
         <h2 class="text-[#4A0379] text-2xl font-roboto">Kloud Stream</h2>
@@ -489,7 +489,7 @@
       </button>
     </div>
 
-  </section>
+  </section> -->
 
 
 
@@ -537,36 +537,36 @@
         <form class="space-y-4">
           <!-- Full Name -->
           <div>
-            <label for="" class="text-[var(--color1)]">Full Name</label>
+            <label for="" class="text-[var(--color1)] font-bold">Full Name</label>
             <input type="text" placeholder="Full Name" 
-              class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+              class="w-full px-4 py-2 mt-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
           </div>
 
           <!-- Contact Number -->
           <div>
-            <label for="" class="text-[var(--color1)]">Contact Number</label>
+            <label for="" class="text-[var(--color1)] font-bold">Contact Number</label>
             <input type="text" placeholder="Contact Number" 
-              class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+              class="w-full px-4 py-2 mt-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
           </div>
 
           <!-- Email -->
           <div>
-            <label for="" class="text-[var(--color1)]">Email</label>
+            <label for="" class="text-[var(--color1)] font-bold">Email</label>
             <input type="email" placeholder="Email" 
-              class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+              class="w-full px-4 py-2 mt-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
           </div>
 
           <!-- Connection Address -->
           <div>
-            <label for="" class="text-[var(--color1)]">Connection Address</label>
+            <label for="" class="text-[var(--color1)] font-bold">Connection Address</label>
             <textarea placeholder="Connection Address" rows="3"
-              class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"></textarea>
+              class="w-full px-4 py-2 mt-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"></textarea>
           </div>
 
           <!-- District -->
           <div>
-            <label for="" class="text-[var(--color1)]">District</label>
-            <select class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+            <label for="" class="text-[var(--color1)] font-bold">District</label>
+            <select class="w-full px-4 py-2 mt-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
               <option>District</option>
               <option>Dhaka</option>
               <option>Chittagong</option>
@@ -576,8 +576,8 @@
 
           <!-- Upazila/Thana -->
           <div>
-            <label for="" class="text-[var(--color1)]">Upazila/Thana</label>
-            <select class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+            <label for="" class="text-[var(--color1)] font-bold">Upazila/Thana</label>
+            <select class="w-full px-4 py-2 mt-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
               <option>Upazila/Thana</option>
               <option>Mirpur</option>
               <option>Banani</option>
@@ -586,8 +586,8 @@
 
           <!-- Packages -->
           <div>
-            <label for="" class="text-[var(--color1)]">Select Packages</label>
-            <select class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+            <label for="" class="text-[var(--color1)] font-bold">Select Packages</label>
+            <select class="w-full px-4 py-2 mt-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
               <option>---Choose the packages---</option>
               <option>Package 1</option>
               <option>Package 2</option>
@@ -596,7 +596,7 @@
 
           <!-- Button -->
           <button type="submit"
-            class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">
+            class="w-full bg-[var(--color1)] text-white py-2 rounded-lg hover:bg-blue-700 transition">
             Order Now
           </button>
         </form>
@@ -608,17 +608,17 @@
 
         <!-- Circle Orbit -->
         <div class="orbit">
-          <i class="icon1 fas fa-phone text-4xl text-sky-600 bg-white rounded-xl"></i>
-          <i class="icon2 fa-solid fa-question text-4xl text-sky-600 bg-white rounded-xl"></i> 
-          <i class="icon3 fas fa-cog text-4xl text-sky-600 bg-white rounded-xl"></i>
-          <i class="icon4 fas fa-search text-4xl text-sky-600 bg-white rounded-xl"></i>
-          <i class="icon5 fas fa-comment-dots text-4xl text-sky-600 bg-white rounded-xl"></i>
-          <i class="icon6 fas fa-microphone text-4xl text-sky-600 bg-white rounded-xl"></i>
+          <i class="icon1 fas fa-phone text-4xl text-[var(--color1)] bg-white rounded-xl"></i>
+          <i class="icon2 fa-solid fa-question text-4xl text-[var(--color1)] bg-white rounded-xl"></i> 
+          <i class="icon3 fas fa-cog text-4xl text-[var(--color1)] bg-white rounded-xl"></i>
+          <i class="icon4 fas fa-search text-4xl text-[var(--color1)] bg-white rounded-xl"></i>
+          <i class="icon5 fas fa-comment-dots text-4xl text-[var(--color1)] bg-white rounded-xl"></i>
+          <i class="icon6 fas fa-microphone text-4xl text-[var(--color1)] bg-white rounded-xl"></i>
         </div>
 
         <!-- Center Circle -->
         <div class="absolute w-32 h-32 flex items-center justify-center rounded-full bg-white shadow-lg">
-          <span class="text-4xl font-bold text-sky-600">24/7</span>
+          <span class="text-4xl font-bold text-[var(--color1)]">24/7</span>
         </div>
 
         <p class="absolute bottom-6 text-white font-semibold">24/7 Customer Support</p>
@@ -629,11 +629,11 @@
 
 
   <!-- Footer Section -->
-  <footer class="bg-sky-600 text-white">
-    <div class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+  <footer class="bg-[var(--color1)] text-white">
+    <div class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-12 gap-8">
 
       <!-- Left Section -->
-      <div>
+      <div class="md:col-span-5">
         <div class="flex items-center gap-2 mb-4">
           <img src="./assets/img/logoWhite.png" alt="Logo" class="w-full h-auto">
           <!-- <h2 class="text-xl font-bold">KLOUD TECHNOLOGIES</h2> -->
@@ -661,30 +661,30 @@
       </div>
 
       <!-- Middle Section -->
-      <div>
+      <div class="md:col-span-4">
         <h3 class="text-lg font-semibold mb-4">Contact</h3>
         <ul class="space-y-3 text-sm">
           <li class="flex items-start gap-2">
-            <span class="text-xl">📍</span>
+            <span class="text-xl"><i class="fa-solid fa-location-dot"></i></span>
             <a href="#" class="hover:underline">Dom-Inno, House-13, Road-7, Block-F, Banani,1213, Dhaka, Bangladesh</a>
           </li>
           <li class="flex items-center gap-2">
-            <span class="text-xl">📞</span>
+            <span class="text-xl"><i class="fa-solid fa-phone"></i></span>
             <a href="tel:+8809649161216" class="hover:underline">+880 9649-161216</a>
           </li>
           <li class="flex items-center gap-2">
-            <span class="text-xl">💬</span>
+            <span class="text-xl"><i class="fa-brands fa-whatsapp"></i></span>
             <a href="https://wa.me/8801313752575" class="hover:underline">+880 1313-752575</a>
           </li>
           <li class="flex items-center gap-2">
-            <span class="text-xl">✉️</span>
+            <span class="text-xl"><i class="fa-solid fa-envelope"></i></span>
             <a href="mailto:contact@kloud.com.bd" class="hover:underline">contact@kloud.com.bd</a>
           </li>
         </ul>
       </div>
 
       <!-- Right Section -->
-      <div>
+      <div class="md:col-span-3">
         <h3 class="text-lg font-semibold mb-4">Others</h3>
         <ul class="space-y-2 text-sm">
           <li><a href="#" class="hover:underline">Career</a></li>
@@ -701,6 +701,7 @@
         </div>
 
       </div>
+
     </div>
 
     <!-- Bottom -->
@@ -710,16 +711,5 @@
   </footer>
 
   
-
-
-
-
-
-
-
-
-
-
-
   </body>
 </html>
