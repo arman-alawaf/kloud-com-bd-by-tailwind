@@ -6,6 +6,12 @@
 
     <title>Kloud</title>
 
+    <!-- GOOGLE FONTS  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -14,20 +20,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/regular.min.css" integrity="sha512-x3gns+l9p4mIK7vYLOCUoFS2P1gavFvnO9Its8sr0AkUk46bgf9R51D8xeRUwCSk+W93YbXWi19BYzXDNBH5SA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/solid.min.css" integrity="sha512-EHa6vH03/Ty92WahM0/tet1Qicl76zihDCkBnFhN3kFGQkC+mc86d7V+6y2ypiLbk3h0beZAGdUpzfMcb06cMg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Titillium+Web:wght@400;700&family=Lato:wght@800&display=swap" rel="stylesheet">
 
   <style>
     :root {
       --color1: #007DB2;
       /* --color1: red; */
     }
+    *{ font-family: "Poppins", serif; }
+    h1, h2, h3, h4, h5, h6{ font-family: "Roboto", serif; }
   </style>
 
+
   <!-- Swiper.js CSS -->
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-  />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -39,7 +44,15 @@
               red1: "red",
             },
             fontSize: {
-              size77: "77px",
+              size77: "77px", 
+            },
+            fontFamily: {
+              Lato: ['Lato', 'sans-serif'],
+              Roboto: ['Roboto', 'sans-serif'],
+              Poppins: ['Poppins', 'sans-serif'],
+              TitilliumWeb: ['Titillium Web', 'sans-serif'],
+              Inter: ['Inter', 'sans-serif'],
+              Montserrat: ['Montserrat', 'sans-serif'],
             },
           },
         },
@@ -69,16 +82,23 @@
     </div>
 
 
-
-
-
-
-
-
-
-
     <!-- Navbar -->
-    <nav class="bg-white shadow sticky top-0 z-50">
+    <nav id="navbar" class="bg-[#ffffff50] shadow sticky top-0 z-50 transition-colors duration-300">
+      <script>
+        const navbar = document.getElementById('navbar');
+
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 50) {
+            // scrolled down → solid
+            navbar.classList.remove('bg-[#ffffff50]');
+            navbar.classList.add('bg-[#ffffff]');
+          } else {
+            // top → transparent
+            navbar.classList.remove('bg-[#ffffff]');
+            navbar.classList.add('bg-[#ffffff50]');
+          }
+        });
+      </script>
 
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center py-3">
@@ -104,8 +124,9 @@
 
           <!-- Buttons (desktop) -->
           <div class="hidden md:flex space-x-3">
-            <a href="#" class="bg-[var(--color1)] text-white px-4 py-2 rounded-lg font-semibold hover:bg-[#005f91]">Quick Pay</a>
-            <a href="#" class="bg-[var(--color1)] text-white px-4 py-2 rounded-lg font-semibold hover:bg-[#005f91]">Self Care</a>
+            <a href="#" class="text-white hover:text-[var(--color1)] bg-[var(--color1)] hover:bg-white font-bold px-6 py-2 rounded border-2 border-[var(--color1)] transition-al">Quick Pay</a>
+            <a href="#" class="text-white hover:text-[var(--color1)] bg-[var(--color1)] hover:bg-white font-bold px-6 py-2 rounded border-2 border-[var(--color1)] transition-al">Self Care</a>
+            <!-- <a href="#" class="bg-[var(--color1)] text-white px-4 py-2 rounded-lg font-semibold hover:bg-[#005f91]">Self Care</a> -->
           </div>
 
           <!-- Mobile Hamburger -->
@@ -153,11 +174,25 @@
 
   <!-- Slider Section -->
   <div class="swiper mySwiper w-full h-[85vh] relative">
+    <style>
+.swiper-pagination-bullet {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    border-radius: var(--swiper-pagination-bullet-border-radius,50%);
+    background: rgb(255, 255, 255);
+    opacity: var(--swiper-pagination-bullet-inactive-opacity, .2);
+}
+.swiper-pagination-bullet-active {
+    opacity: var(--swiper-pagination-bullet-opacity, 1);
+    background: var(--color1);
+}
+    </style>
     <div class="swiper-wrapper">
 
       <!-- Slide 1 -->
       <div class="swiper-slide relative">
-        <img src="./assets/img/sliders/1.png" alt="Slider 1" class="w-full h-screen object-cover object-center" />
+        <img data-aos="fade-up" src="./assets/img/sliders/1.png" alt="Slider 1" class="w-full h-screen object-cover object-center" />
         <div class="absolute inset-0 flex items-center justify-center bg-black/40">
           <h2 class="text-3xl md:text-5xl font-bold text-white text-center px-4">
             Experience the Next Level
@@ -212,22 +247,12 @@
 
 
 
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            roboto: ['Roboto', 'sans-serif'],
-            titillium: ['Titillium Web', 'sans-serif'],
-            lato: ['Lato', 'sans-serif'],
-          }
-        }
-      }
-    }
-  </script>
+<!-- PACKAGES START  -->
+
+<section>
 
   <!-- Toggle Tabs (Regular / SME) -->
-  <div class="flex justify-center my-10">
+  <div class="flex justify-center mt-10 mb-32">
     <div class="p-1 relative inline-flex rounded-full border-[3px] border-[var(--color1)] overflow-hidden text-[var(--color1)] font-bold text-lg">
 
       <!-- Regular Button -->
@@ -251,79 +276,218 @@
     </div>
   </div>
 
+    <svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
+      <symbol id="icon-circle-arrow" viewBox="0 0 28 28">
+        <circle cx="13.9639" cy="14.2092" r="13.3193" fill="#4A0379"/>
+        <path d="M25.208 14.0324L16.2615 7.76978C16.1289 7.677 15.9468 7.77183 15.9468 7.93363V10.2036C15.9468 10.3141 15.8572 10.4036 15.7468 10.4036H13.2927C13.1822 10.4036 13.0927 10.4932 13.0927 10.6036V16.8633C13.0927 16.9737 13.1822 17.0633 13.2927 17.0633H15.7468C15.8572 17.0633 15.9468 17.1528 15.9468 17.2633V19.5642C15.9468 19.7196 16.1164 19.8156 16.2497 19.7357L25.1962 14.3677C25.3205 14.2932 25.3267 14.1154 25.208 14.0324Z" fill="white"/>
+        <path d="M10.9764 10.9237C10.9764 10.8132 11.066 10.7237 11.1764 10.7237H12.3947C12.5051 10.7237 12.5947 10.8132 12.5947 10.9237V16.4987C12.5947 16.6092 12.5051 16.6987 12.3947 16.6987H11.1764C11.066 16.6987 10.9764 16.6092 10.9764 16.4987V10.9237Z" fill="white"/>
+        <path d="M9.23376 11.4216C9.23376 11.3112 9.32331 11.2216 9.43376 11.2216H10.2786C10.389 11.2216 10.4786 11.3112 10.4786 11.4216V16.1253C10.4786 16.2357 10.389 16.3253 10.2786 16.3253H9.43376C9.32331 16.3253 9.23376 16.2357 9.23376 16.1253V11.4216Z" fill="white"/>
+        <path d="M7.74011 11.9195C7.74011 11.8091 7.82966 11.7195 7.94011 11.7195H8.53595C8.6464 11.7195 8.73595 11.8091 8.73595 11.9195V15.6274C8.73595 15.7378 8.6464 15.8274 8.53595 15.8274H7.94011C7.82966 15.8274 7.74011 15.7378 7.74011 15.6274V11.9195Z" fill="white"/>
+        <path d="M6.24634 12.1685C6.24634 12.058 6.33588 11.9685 6.44634 11.9685H7.04217C7.15263 11.9685 7.24217 12.058 7.24217 12.1685V15.3784C7.24217 15.4889 7.15263 15.5784 7.04217 15.5784H6.44634C6.33588 15.5784 6.24634 15.4889 6.24634 15.3784V12.1685Z" fill="white"/>
+        <path d="M5.00146 12.5419C5.00146 12.4315 5.09101 12.3419 5.20146 12.3419H5.54834C5.6588 12.3419 5.74834 12.4315 5.74834 12.5419V15.0049C5.74834 15.1154 5.6588 15.2049 5.54834 15.2049H5.20146C5.09101 15.2049 5.00146 15.1154 5.00146 15.0049V12.5419Z" fill="white"/>
+      </symbol>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
+      <symbol id="icon-arrow" viewBox="0 0 17 11">
+        <path d="M16.644 5.32324L9.35403 0.220285C9.22147 0.127496 9.03933 0.222327 9.03933 0.384132V2.15714C9.03933 2.2676 8.94979 2.35714 8.83933 2.35714H6.88219C6.77173 2.35714 6.68219 2.44669 6.68219 2.55714V7.65714C6.68219 7.7676 6.77173 7.85714 6.88219 7.85714H8.83933C8.94979 7.85714 9.03933 7.94669 9.03933 8.05714V9.86105C9.03933 10.0165 9.20893 10.1125 9.34223 10.0325L16.6322 5.65858C16.7564 5.58406 16.7626 5.40631 16.644 5.32324Z" fill="#4A0379"/>
+        <path d="M4.93457 2.82152C4.93457 2.71106 5.02411 2.62152 5.13457 2.62152H6.07102C6.18148 2.62152 6.27102 2.71106 6.27102 2.82152V7.3561C6.27102 7.46656 6.18148 7.5561 6.07102 7.5561H5.13457C5.02411 7.5561 4.93457 7.46656 4.93457 7.3561V2.82152Z" fill="#4A0379"/>
+        <path d="M3.4953 3.23271C3.4953 3.12226 3.58484 3.03271 3.6953 3.03271H4.32334C4.43379 3.03271 4.52334 3.12226 4.52334 3.23271V7.04767C4.52334 7.15812 4.43379 7.24767 4.32334 7.24767H3.6953C3.58484 7.24767 3.4953 7.15812 3.4953 7.04767V3.23271Z" fill="#4A0379"/>
+        <path d="M2.26166 3.64391C2.26166 3.53345 2.3512 3.44391 2.46166 3.44391H2.88409C2.99454 3.44391 3.08409 3.53345 3.08409 3.64391V6.63643C3.08409 6.74689 2.99454 6.83643 2.88409 6.83643H2.46166C2.3512 6.83643 2.26166 6.74689 2.26166 6.63643V3.64391Z" fill="#4A0379"/>
+        <path d="M1.02802 3.84954C1.02802 3.73908 1.11756 3.64954 1.22802 3.64954H1.65044C1.7609 3.64954 1.85045 3.73908 1.85045 3.84954V6.43084C1.85045 6.5413 1.7609 6.63084 1.65044 6.63084H1.22802C1.11756 6.63084 1.02802 6.5413 1.02802 6.43084V3.84954Z" fill="#4A0379"/>
+        <path d="M0 4.15795C0 4.04749 0.0895431 3.95795 0.2 3.95795H0.416823C0.527279 3.95795 0.616822 4.04749 0.616822 4.15795V6.12243C0.616822 6.23289 0.527279 6.32243 0.416822 6.32243H0.2C0.0895429 6.32243 0 6.23289 0 6.12243V4.15795Z" fill="#4A0379"/>
+      </symbol>
+    </svg>
+
   <!-- Regular Packages -->
-  <section id="regular" class="pb-20 max-w-7xl mx-auto grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 transition-opacity duration-300">
+  <section id="regular" class="pb-20 max-w-7xl mx-auto grid gap-20 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 transition-opacity duration-300">
 
     <!-- Kloud Mini -->
-    <div class="rounded-2xl bg-gradient-to-t from-blue-200 to-purple-100 text-gray-900 p-6 flex flex-col items-center transform hover:scale-[1.05] transition duration-300">
-      <div class="bg-white rounded-xl px-6 py-3 mb-6 w-full text-center">
-        <h2 class="text-purple-800 text-xl font-bold">Kloud Mini</h2>
-        <p class="text-purple-800 text-4xl font-extrabold font-titillium">35<span class="text-lg font-medium">Mbps</span></p>
+    <div class="rounded-2xl bg-[linear-gradient(to_bottom,#A890E683,#009FE383)] text-gray-900 p-6 flex flex-col items-center transform hover:scale-[1.05] transition duration-300">
+      <div class="bg-white rounded-full px-6 py-3 mb-3 w-[60%] text-center">
+        <h2 class="text-purple-800 text-xl">Kloud Mini</h2>
+        <p class="text-purple-800 text-4xl font-bold font-TitilliumWeb">35<span class="text-lg font-medium">Mbps</span></p>
       </div>
+      <hr class="mb-3 w-[60%] border border-white/50">
       <div class="bg-white/80 rounded-lg px-6 py-4 mb-6 w-full text-sm font-medium text-gray-700">
         <h3 class="text-lg font-bold text-purple-900 mb-3">Premium Benefits</h3>
         <ul class="space-y-2">
-          <li>➤ Bufferless Browsing</li>
-          <li>➤ Content Server (KloudNix, BDIX)</li>
-          <li>➤ 24/7 Customer Support</li>
-          <li>➤ IPV6 Available</li>
-          <li>🚀 <strong class="text-black">Free Installation</strong></li>
+          <li class="inline-flex items-center gap-4"><svg class="w-7 h-7"><use href="#icon-arrow"></use></svg> Bufferless Browsing</li>
+          <li class="inline-flex items-center gap-4"><svg class="w-7 h-7"><use href="#icon-arrow"></use></svg>  Content Server (KloudNix, BDIX)</li>
+          <li class="inline-flex items-center gap-4"><svg class="w-7 h-7"><use href="#icon-arrow"></use></svg>  24/7 Customer Support</li>
+          <li class="inline-flex items-center gap-4"><svg class="w-7 h-7"><use href="#icon-arrow"></use></svg>  IPV6 Available</li>
+          <li class="text-center">🚀 <strong class="text-black">Free Installation</strong></li>
         </ul>
       </div>
       <div class="text-center mb-3">
-        <p class="text-3xl font-light font-titillium text-gray-800">BDT 699<br><span class="text-base">Per Month</span></p>
-        <p class="text-xs text-gray-600 italic mt-1">*excluding vat</p>
+        <p class="text-3xl font-light font-TitilliumWeb text-white [text-shadow:-3px_4px_5px_rgba(0,0,0,0.25)]">BDT <span class="font-bold text-6xl font-TitilliumWeb ">699</span> <br><span class="">Per Month</span></p>
+        <p class="text-xs text-white italic mt-1 [text-shadow:-3px_4px_5px_rgba(0,0,0,0.25)] text-end">*excluding vat</p>
       </div>
-      <button class="mt-2 bg-white text-[var(--color1)] hover:text-white font-bold px-6 py-2 rounded-full border-2 border-[var(--color1)] hover:border-white hover:bg-[var(--color1)] transition-all">
+      <hr class="w-[60%] border border-white/50">
+      <button class="mt-3 bg-white text-[var(--color1)] hover:text-white font-bold px-6 py-2 rounded-full border-2 border-[var(--color1)] hover:border-white hover:bg-[var(--color1)] transition-all">
         Select this Package
       </button>
     </div>
 
     <!-- Kloud Neo -->
-    <div class="rounded-2xl bg-[linear-gradient(to_bottom,rgba(106,84,163,0.83),rgba(0,125,178,0.83))] text-white p-6 flex flex-col items-center scale-105 shadow-lg transform hover:scale-[1.1] transition duration-300">
-      <div class="bg-white rounded-xl px-6 py-3 mb-6 w-full text-center">
-        <h2 class="text-purple-800 text-xl font-bold">Kloud Neo</h2>
-        <p class="text-purple-800 text-4xl font-extrabold font-titillium">55<span class="text-lg font-medium">Mbps</span></p>
+    <div class="rounded-2xl bg-[linear-gradient(to_bottom,#6A54A3,#007DB2)] text-white p-6 flex flex-col items-center md:scale-125 shadow-lg transform hover:scale-[1.3] transition duration-300">
+      <div class="bg-white rounded-full px-6 py-3 mb-3 w-[60%] text-center">
+        <h2 class="text-purple-800 text-xl">Kloud Neo</h2>
+        <p class="text-purple-800 text-4xl font-bold font-titillium">55<span class="text-lg font-medium">Mbps</span></p>
       </div>
+      <hr class="mb-3 w-[60%] border border-white/50">
       <div class="bg-white/80 rounded-lg px-6 py-4 mb-6 w-full text-sm font-medium text-gray-800">
         <h3 class="text-lg font-bold text-purple-900 mb-3">Premium Benefits</h3>
         <ul class="space-y-2">
-          <li>➤ Including Kloud Mini & Stream</li>
-          <li>➤ Bufferless Streaming Site</li>
-          <li>➤ Low Latency Popular Games</li>
-          <li>➤ 24/7 Customer Support</li>
-          <li>🚀 <strong class="text-black">Free Installation</strong></li>
+
+          <li class="inline-flex items-center gap-4">
+            <svg class="w-7 h-7"><use href="#icon-circle-arrow"></use></svg>
+            Including Kloud Mini & Stream
+          </li>
+          <li class="inline-flex items-center gap-4">
+            <svg class="w-7 h-7"><use href="#icon-circle-arrow"></use></svg>
+            Bufferless Streaming Site
+          </li>
+          <li class="inline-flex items-center gap-4">
+            <svg class="w-7 h-7"><use href="#icon-circle-arrow"></use></svg>
+            Low Latency Popular Games
+          </li>
+          <li class="inline-flex items-center gap-4">
+            <svg class="w-7 h-7"><use href="#icon-circle-arrow"></use></svg>
+            24/7 Customer Support
+          </li>
+          <li class="text-center text-xl">🚀 <strong class="text-black">Free Installation</strong></li>
         </ul>
       </div>
       <div class="text-center mb-3">
-        <p class="text-3xl font-light font-titillium text-white">BDT 999<br><span class="text-base">Per Month</span></p>
-        <p class="text-xs text-white italic mt-1">*excluding vat</p>
+        <p class="text-3xl font-light font-TitilliumWeb text-white [text-shadow:-3px_4px_5px_rgba(0,0,0,0.25)]">BDT <span class="font-bold text-6xl font-TitilliumWeb ">999</span> <br><span class="">Per Month</span></p>
+        <p class="text-xs text-white italic mt-1 [text-shadow:-3px_4px_5px_rgba(0,0,0,0.25)] text-end">*excluding vat</p>
       </div>
+      <hr class="w-[60%] border border-white/50">
       <button class="mt-2 bg-white text-[var(--color1)] hover:text-white font-bold px-6 py-2 rounded-full border-2 border-[var(--color1)] hover:border-white hover:bg-[var(--color1)] transition-all">
         Select this Package
       </button>
     </div>
 
     <!-- Kloud Stream -->
-    <div class="rounded-2xl bg-gradient-to-t from-blue-200 to-purple-100 text-gray-900 p-6 flex flex-col items-center transform hover:scale-[1.05] transition duration-300">
-      <div class="bg-white rounded-xl px-6 py-3 mb-6 w-full text-center">
-        <h2 class="text-purple-800 text-xl font-bold">Kloud Stream</h2>
-        <p class="text-purple-800 text-4xl font-extrabold font-titillium">45<span class="text-lg font-medium">Mbps</span></p>
+    <div class="rounded-2xl bg-[linear-gradient(to_bottom,#A890E683,#009FE383)] text-gray-900 p-6 flex flex-col items-center transform hover:scale-[1.05] transition duration-300">
+      <div class="bg-white rounded-full px-6 py-3 mb-3 w-[60%] text-center">
+        <h2 class="text-purple-800 text-xl">Kloud Stream</h2>
+        <p class="text-purple-800 text-4xl font-bold font-titillium">45<span class="text-lg font-medium">Mbps</span></p>
       </div>
+      <hr class="mb-3 w-[60%] border border-white/50">
       <div class="bg-white/80 rounded-lg px-6 py-4 mb-6 w-full text-sm font-medium text-gray-700">
         <h3 class="text-lg font-bold text-purple-900 mb-3">Premium Benefits</h3>
         <ul class="space-y-2">
-          <li>➤ Including Kloud Mini</li>
-          <li>➤ Highspeed - KloudNix & BDIX</li>
-          <li>➤ 4k Streaming</li>
-          <li>➤ 24/7 Customer Support</li>
-          <li>🚀 <strong class="text-black">Free Installation</strong></li>
+          <li class="inline-flex items-center gap-4"><svg class="w-7 h-7"><use href="#icon-arrow"></use></svg> Including Kloud Mini</li>
+          <li class="inline-flex items-center gap-4"><svg class="w-7 h-7"><use href="#icon-arrow"></use></svg> Highspeed - KloudNix & BDIX</li>
+          <li class="inline-flex items-center gap-4"><svg class="w-7 h-7"><use href="#icon-arrow"></use></svg> 4k Streaming</li>
+          <li class="inline-flex items-center gap-4"><svg class="w-7 h-7"><use href="#icon-arrow"></use></svg> 24/7 Customer Support</li>
+          <li class="text-center">🚀 <strong class="text-black">Free Installation</strong></li>
         </ul>
       </div>
       <div class="text-center mb-3">
-        <p class="text-3xl font-light font-titillium text-gray-800">BDT 899<br><span class="text-base">Per Month</span></p>
-        <p class="text-xs text-gray-600 italic mt-1">*excluding vat</p>
+        <p class="text-3xl font-light font-TitilliumWeb text-white [text-shadow:-3px_4px_5px_rgba(0,0,0,0.25)]">BDT <span class="font-bold text-6xl font-TitilliumWeb ">899</span> <br><span class="">Per Month</span></p>
+        <p class="text-xs text-white italic mt-1 [text-shadow:-3px_4px_5px_rgba(0,0,0,0.25)] text-end">*excluding vat</p>
       </div>
+      <hr class="w-[60%] border border-white/50">
+      <button class="mt-2 bg-white text-[var(--color1)] hover:text-white font-bold px-6 py-2 rounded-full border-2 border-[var(--color1)] hover:border-white hover:bg-[var(--color1)] transition-all">
+        Select this Package
+      </button>
+    </div>
+
+  </section>
+
+  <section id="regular" class="md:pt-32 max-w-7xl mx-auto grid gap-20 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 transition-opacity duration-300">
+
+    <!-- Kloud Boost -->
+    <div class="rounded-2xl bg-[linear-gradient(to_bottom,#A890E683,#009FE383)] text-gray-900 p-6 flex flex-col items-center transform hover:scale-[1.05] transition duration-300">
+      <div class="bg-white rounded-full px-6 py-3 mb-3 w-[60%] text-center">
+        <h2 class="text-purple-800 text-xl">Kloud Boost +</h2>
+        <p class="text-purple-800 text-4xl font-bold font-TitilliumWeb">75<span class="text-lg font-medium">Mbps</span></p>
+      </div>
+      <hr class="mb-3 w-[60%] border border-white/50">
+      <div class="bg-white/80 rounded-lg px-6 py-4 mb-6 w-full text-sm font-medium text-gray-700">
+        <h3 class="text-lg font-bold text-purple-900 mb-3">Premium Benefits</h3>
+        <ul class="space-y-2">
+          <li class="inline-flex items-center gap-4"><svg class="w-7 h-7"><use href="#icon-arrow"></use></svg> Bufferless Browsing</li>
+          <li class="inline-flex items-center gap-4"><svg class="w-7 h-7"><use href="#icon-arrow"></use></svg>  Content Server (KloudNix, BDIX)</li>
+          <li class="inline-flex items-center gap-4"><svg class="w-7 h-7"><use href="#icon-arrow"></use></svg>  24/7 Customer Support</li>
+          <li class="inline-flex items-center gap-4"><svg class="w-7 h-7"><use href="#icon-arrow"></use></svg>  IPV6 Available</li>
+          <li class="text-center">🚀 <strong class="text-black">Free Installation</strong></li>
+        </ul>
+      </div>
+      <div class="text-center mb-3">
+        <p class="text-3xl font-light font-TitilliumWeb text-white [text-shadow:-3px_4px_5px_rgba(0,0,0,0.25)]">BDT <span class="font-bold text-6xl font-TitilliumWeb ">1499</span> <br><span class="">Per Month</span></p>
+        <p class="text-xs text-white italic mt-1 [text-shadow:-3px_4px_5px_rgba(0,0,0,0.25)] text-end">*excluding vat</p>
+      </div>
+      <hr class="w-[60%] border border-white/50">
+      <button class="mt-3 bg-white text-[var(--color1)] hover:text-white font-bold px-6 py-2 rounded-full border-2 border-[var(--color1)] hover:border-white hover:bg-[var(--color1)] transition-all">
+        Select this Package
+      </button>
+    </div>
+
+    <!-- Kloud Gamers -->
+    <div class="rounded-2xl bg-[conic-gradient(at_top,#3D0066,#5F049C,#3D0066)] text-white p-6 flex flex-col items-center md:scale-125 shadow-lg transform hover:scale-[1.3] transition duration-300">
+      <div class="bg-white rounded-full px-6 py-3 mb-3 w-[60%] text-center">
+        <h2 class="text-purple-800 text-xl">Kloud Gamers</h2>
+        <p class="text-purple-800 text-4xl font-bold font-titillium">85<span class="text-lg font-medium">Mbps</span></p>
+      </div>
+      <hr class="mb-3 w-[60%] border border-white/50">
+      <div class="bg-white/80 rounded-lg px-6 py-4 mb-6 w-full text-sm font-medium text-gray-800">
+        <h3 class="text-lg font-bold text-purple-900 mb-3">Premium Benefits</h3>
+        <ul class="space-y-2">
+
+          <li class="inline-flex items-center gap-4">
+            <svg class="w-7 h-7"><use href="#icon-circle-arrow"></use></svg>
+            Including Kloud Mini & Stream
+          </li>
+          <li class="inline-flex items-center gap-4">
+            <svg class="w-7 h-7"><use href="#icon-circle-arrow"></use></svg>
+            Bufferless Streaming Site
+          </li>
+          <li class="inline-flex items-center gap-4">
+            <svg class="w-7 h-7"><use href="#icon-circle-arrow"></use></svg>
+            Low Latency Popular Games
+          </li>
+          <li class="inline-flex items-center gap-4">
+            <svg class="w-7 h-7"><use href="#icon-circle-arrow"></use></svg>
+            24/7 Customer Support
+          </li>
+          <li class="text-center text-xl">🚀 <strong class="text-black">Free Installation</strong></li>
+        </ul>
+      </div>
+      <div class="text-center mb-3">
+        <p class="text-3xl font-light font-TitilliumWeb text-white [text-shadow:-3px_4px_5px_rgba(0,0,0,0.25)]">BDT <span class="font-bold text-6xl font-TitilliumWeb ">1399</span> <br><span class="">Per Month</span></p>
+        <p class="text-xs text-white italic mt-1 [text-shadow:-3px_4px_5px_rgba(0,0,0,0.25)] text-end">*excluding vat</p>
+      </div>
+      <hr class="w-[60%] border border-white/50">
+      <button class="mt-2 bg-white text-[var(--color1)] hover:text-white font-bold px-6 py-2 rounded-full border-2 border-[var(--color1)] hover:border-white hover:bg-[var(--color1)] transition-all">
+        Select this Package
+      </button>
+    </div>
+
+    <!-- Kloud Edge  -->
+    <div class="rounded-2xl bg-[linear-gradient(to_bottom,#A890E683,#009FE383)] text-gray-900 p-6 flex flex-col items-center transform hover:scale-[1.05] transition duration-300">
+      <div class="bg-white rounded-full px-6 py-3 mb-3 w-[60%] text-center">
+        <h2 class="text-purple-800 text-xl">Kloud Edge</h2>
+        <p class="text-purple-800 text-4xl font-bold font-titillium">100<span class="text-lg font-medium">Mbps</span></p>
+      </div>
+      <hr class="mb-3 w-[60%] border border-white/50">
+      <div class="bg-white/80 rounded-lg px-6 py-4 mb-6 w-full text-sm font-medium text-gray-700">
+        <h3 class="text-lg font-bold text-purple-900 mb-3">Premium Benefits</h3>
+        <ul class="space-y-2">
+          <li class="inline-flex items-center gap-4"><svg class="w-7 h-7"><use href="#icon-arrow"></use></svg> Including Kloud Mini</li>
+          <li class="inline-flex items-center gap-4"><svg class="w-7 h-7"><use href="#icon-arrow"></use></svg> Highspeed - KloudNix & BDIX</li>
+          <li class="inline-flex items-center gap-4"><svg class="w-7 h-7"><use href="#icon-arrow"></use></svg> 4k Streaming</li>
+          <li class="inline-flex items-center gap-4"><svg class="w-7 h-7"><use href="#icon-arrow"></use></svg> 24/7 Customer Support</li>
+          <li class="text-center">🚀 <strong class="text-black">Free Installation</strong></li>
+        </ul>
+      </div>
+      <div class="text-center mb-3">
+        <p class="text-3xl font-light font-TitilliumWeb text-white [text-shadow:-3px_4px_5px_rgba(0,0,0,0.25)]">BDT <span class="font-bold text-6xl font-TitilliumWeb ">1899</span> <br><span class="">Per Month</span></p>
+        <p class="text-xs text-white italic mt-1 [text-shadow:-3px_4px_5px_rgba(0,0,0,0.25)] text-end">*excluding vat</p>
+      </div>
+      <hr class="w-[60%] border border-white/50">
       <button class="mt-2 bg-white text-[var(--color1)] hover:text-white font-bold px-6 py-2 rounded-full border-2 border-[var(--color1)] hover:border-white hover:bg-[var(--color1)] transition-all">
         Select this Package
       </button>
@@ -368,6 +532,8 @@
     });
   </script>
 
+</section>
+<!-- PACKAGES END  -->
 
 
 
@@ -379,10 +545,7 @@
 
 
   <!-- Testing Section -->
-  <section 
-    class="relative w-full h-[50vh] md:h-[60vh] lg:h-[70vh] bg-cover bg-center flex items-center justify-center px-6"
-    style="background-image: url('./assets/img/Wifi-background\ 1.png');"
-  >
+  <section class="mt-32 relative w-full h-[50vh] md:h-[60vh] lg:h-[70vh] bg-cover bg-center flex items-center justify-center px-6" style="background-image: url('./assets/img/Wifi-background\ 1.png');" >
     <!-- Content Wrapper -->
     <div class="max-w-6xl w-full flex flex-col md:flex-row items-center justify-between text-white">
       
@@ -495,37 +658,11 @@
 
 
 
-
-  <div class="max-w-7xl mx-auto px-4 py-10">
-
-  <style>
-    /* Circle Animation */
-    .orbit {
-      position: absolute;
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      animation: spin 15s linear infinite;
-    }
-    .orbit img, .orbit i {
-      position: absolute;
-      width: 40px;
-      height: 40px;
-    }
-    .icon1 { top: 0; left: 50%; transform: translate(-50%, -50%); }
-    .icon2 { top: 25%; right: 0; transform: translate(50%, -50%); }
-    .icon3 { bottom: 25%; right: 0; transform: translate(50%, 50%); }
-    .icon4 { bottom: 0; left: 50%; transform: translate(-50%, 50%); }
-    .icon5 { bottom: 25%; left: 0; transform: translate(-50%, 50%); }
-    .icon6 { top: 25%; left: 0; transform: translate(-50%, -50%); }
-
-    @keyframes spin {
-      100% { transform: rotate(360deg); }
-    }
-  </style>
+  <!-- SPEED TEST START  -->
+  <div class="max-w-7xl mx-auto px-4 py-10" data-aos="fade-up" data-aos-delay="300">
 
 
-    <div class="grid md:grid-cols-2 gap-6 bg-white rounded-2xl shadow-lg overflow-hidden">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-white rounded-2xl shadow-lg overflow-hidden">
 
       <!-- Left Side Form -->
       <div class="p-8">
@@ -603,28 +740,96 @@
       </div>
 
       <!-- Right Side Background with Icons -->
-      <div class="relative flex items-center justify-center bg-cover bg-center" 
-        style="background-image: url('./assets/img/contact.png');">
+      <div class="relative flex items-center justify-center bg-cover bg-center h-screen" 
+        style="background-image: url('./assets/img/formRight.png');">
+
+<style>
+  .orbit {
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    animation: spin 100s linear infinite;
+  }
+  .orbit img, .orbit i {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+  }
+  .icon1 { top: 0; left: 50%; transform: translate(-50%, -50%); }
+  .icon2 { top: 25%; right: 0; transform: translate(50%, -50%); }
+  .icon3 { bottom: 25%; right: 0; transform: translate(50%, 50%); }
+  .icon4 { bottom: 0; left: 50%; transform: translate(-50%, 50%); }
+  .icon5 { bottom: 25%; left: 0; transform: translate(-50%, 50%); }
+  .icon6 { top: 25%; left: 0; transform: translate(-50%, -50%); }
+
+  @keyframes spin {
+    100% { transform: rotate(360deg); }
+  }
+</style>
+
+<!-- <style>
+  .orbit {
+    position: relative;
+    width: 200px;
+    height: 200px;
+  }
+
+  .orbit i {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .orbit i::before {
+    content: "";
+  }
+
+  .icon1 { animation: circle 15s linear infinite; }
+  .icon2 { animation: circle 15s linear infinite 2.5s; }
+  .icon3 { animation: circle 15s linear infinite 5s; }
+  .icon4 { animation: circle 15s linear infinite 7.5s; }
+  .icon5 { animation: circle 15s linear infinite 10s; }
+  .icon6 { animation: circle 15s linear infinite 12.5s; }
+
+  @keyframes circle {
+    0%   { transform: rotate(0deg) translateX(100px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(100px) rotate(-360deg); }
+  }
+</style> -->
 
         <!-- Circle Orbit -->
         <div class="orbit">
+          <i class="icon1 fas fa-phone text-5xl text-white rounded-xl"></i>
+          <i class="icon2 fa-solid fa-question text-5xl text-white rounded-xl"></i> 
+          <i class="icon3 fas fa-cog text-5xl text-white rounded-xl"></i>
+          <i class="icon4 fas fa-search text-5xl text-white rounded-xl"></i>
+          <i class="icon5 fas fa-comment-dots text-5xl text-white rounded-xl"></i>
+          <i class="icon6 fas fa-microphone text-5xl text-white rounded-xl"></i>
+        </div>
+        <!-- <div class="orbit">
           <i class="icon1 fas fa-phone text-4xl text-[var(--color1)] bg-white rounded-xl"></i>
           <i class="icon2 fa-solid fa-question text-4xl text-[var(--color1)] bg-white rounded-xl"></i> 
           <i class="icon3 fas fa-cog text-4xl text-[var(--color1)] bg-white rounded-xl"></i>
           <i class="icon4 fas fa-search text-4xl text-[var(--color1)] bg-white rounded-xl"></i>
           <i class="icon5 fas fa-comment-dots text-4xl text-[var(--color1)] bg-white rounded-xl"></i>
           <i class="icon6 fas fa-microphone text-4xl text-[var(--color1)] bg-white rounded-xl"></i>
-        </div>
+        </div> -->
 
         <!-- Center Circle -->
-        <div class="absolute w-32 h-32 flex items-center justify-center rounded-full bg-white shadow-lg">
-          <span class="text-4xl font-bold text-[var(--color1)]">24/7</span>
+        <div class="absolute w-40 h-40 flex items-center justify-center rounded-full bg-white shadow-lg">
+          <span class="text-5xl font-bold text-[var(--color1)]" style="font-family: 'Montserrat';">24/7</span>
         </div>
 
-        <p class="absolute bottom-6 text-white font-semibold">24/7 Customer Support</p>
+        <p class="absolute bottom-20 text-white text-2xl font-semibold">24/7 Customer Support</p>
       </div>
+
     </div>
   </div>
+  <!-- SPEED TEST END  -->
 
 
 
@@ -633,19 +838,19 @@
     <div class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-12 gap-8">
 
       <!-- Left Section -->
-      <div class="md:col-span-5">
+      <div class="md:col-span-6">
         <div class="flex items-center gap-2 mb-4">
-          <img src="./assets/img/logoWhite.png" alt="Logo" class="w-full h-auto">
+          <img src="./assets/img/logoWhite.png" alt="Logo" class="w-auto h-auto">
           <!-- <h2 class="text-xl font-bold">KLOUD TECHNOLOGIES</h2> -->
         </div>
-        <p class="font-semibold">Kloud Technologies Limited</p>
+        <h3 class="text-lg font-semibold mb-3">Kloud Technologies Limited</h3>
         <p class="text-sm mt-2">
           Shanta Western Tower, Suit # 904, Level 9, 186 Bir Uttam <br>
           Mir Sawkat Road, Tejgaon I/A, Dhaka – 1208, Bangladesh.
         </p>
 
         <div class="mt-4">
-          <p class="font-semibold">QUALITY POLICY</p>
+          <h3 class="text-lg font-semibold mb-3">QUALITY POLICY</h3>
           <p class="text-sm mt-1">
             Facilitate seamless information flow through innovative ICT Infrastructure and services. <br>
             Kloud Technologies Limited is ISO 9001:2015 Certified Company.
@@ -653,7 +858,8 @@
         </div>
 
         <div class="mt-4">
-          <p class="font-semibold">POLICY</p>
+          <h3 class="text-lg font-semibold mb-3">POLICY</h3>
+          <h6></h6>
           <p class="text-sm mt-1">
             Kloud is committed to ensuring information security by complying applicable ISO 27001:2022 standard & regulatory requirements and continually improving the ISMS to support our business objectives.
           </p>
@@ -662,34 +868,34 @@
 
       <!-- Middle Section -->
       <div class="md:col-span-4">
-        <h3 class="text-lg font-semibold mb-4">Contact</h3>
+        <h3 class="text-lg font-semibold mb-3">Contact</h3>
         <ul class="space-y-3 text-sm">
           <li class="flex items-start gap-2">
             <span class="text-xl"><i class="fa-solid fa-location-dot"></i></span>
-            <a href="#" class="hover:underline">Dom-Inno, House-13, Road-7, Block-F, Banani,1213, Dhaka, Bangladesh</a>
+            <a href="#" class="hover:underline underline-offset-4">Dom-Inno, House-13, Road-7, Block-F, Banani,1213, Dhaka, Bangladesh</a>
           </li>
           <li class="flex items-center gap-2">
             <span class="text-xl"><i class="fa-solid fa-phone"></i></span>
-            <a href="tel:+8809649161216" class="hover:underline">+880 9649-161216</a>
+            <a href="tel:+8809649161216" class="hover:underline underline-offset-4">+880 9649-161216</a>
           </li>
           <li class="flex items-center gap-2">
             <span class="text-xl"><i class="fa-brands fa-whatsapp"></i></span>
-            <a href="https://wa.me/8801313752575" class="hover:underline">+880 1313-752575</a>
+            <a href="https://wa.me/8801313752575" class="hover:underline underline-offset-4">+880 1313-752575</a>
           </li>
           <li class="flex items-center gap-2">
             <span class="text-xl"><i class="fa-solid fa-envelope"></i></span>
-            <a href="mailto:contact@kloud.com.bd" class="hover:underline">contact@kloud.com.bd</a>
+            <a href="mailto:contact@kloud.com.bd" class="hover:underline underline-offset-4">contact@kloud.com.bd</a>
           </li>
         </ul>
       </div>
 
       <!-- Right Section -->
-      <div class="md:col-span-3">
-        <h3 class="text-lg font-semibold mb-4">Others</h3>
+      <div class="md:col-span-2">
+        <h3 class="text-lg font-semibold mb-3">Others</h3>
         <ul class="space-y-2 text-sm">
-          <li><a href="#" class="hover:underline">Career</a></li>
-          <li><a href="#" class="hover:underline">Our Policies</a></li>
-          <li><a href="#" class="hover:underline">Self Care</a></li>
+          <li><a href="#" class="hover:underline underline-offset-4">Career</a></li>
+          <li><a href="#" class="hover:underline underline-offset-4">Our Policies</a></li>
+          <li><a href="#" class="hover:underline underline-offset-4">Self Care</a></li>
         </ul>
 
         <!-- Social Icons -->
