@@ -28,6 +28,9 @@
     }
     *{ font-family: "Poppins", serif; }
     h1, h2, h3, h4, h5, h6{ font-family: "Roboto", serif; }
+    html {
+      scroll-behavior: smooth;
+    }
   </style>
 
 
@@ -35,6 +38,12 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <script src="https://cdn.tailwindcss.com"></script>
+<!-- module.exports = {
+  theme: {
+    extend: {
+    },
+  },
+} -->
 
     <script>
       tailwind.config = {
@@ -104,15 +113,15 @@
         <div class="flex justify-between items-center py-3">
 
             <!-- Logo -->
-            <div class="flex items-center space-x-2">
+            <a href="./index.html" class="flex items-center space-x-2">
                 <img src="./assets/img/logo.png" alt="Logo" class="h-12 w-auto" />
-            </div>
+            </a>
 
 
           <!-- Desktop Menu -->
           <ul class="hidden md:flex space-x-6 text-gray-800 font-medium">
             <li><a href="#" class="hover:text-[var(--color1)]">Home</a></li>
-            <li><a href="#" class="hover:text-[var(--color1)]">Packages</a></li>
+            <li><a href="#Packages" class="hover:text-[var(--color1)]">Packages</a></li>
             <li><a href="#" class="hover:text-[var(--color1)]">Business</a></li>
             <li><a href="#" class="hover:text-[var(--color1)]">About Us</a></li>
             <li>
@@ -249,7 +258,7 @@
 
 <!-- PACKAGES START  -->
 
-<section>
+<section id="Packages">
 
   <!-- Toggle Tabs (Regular / SME) -->
   <div class="flex justify-center mt-10 mb-32">
@@ -299,198 +308,202 @@
     </svg>
 
   <!-- Regular Packages -->
-  <section id="regular" class="pb-20 max-w-7xl mx-auto grid gap-20 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 transition-opacity duration-300">
+  <section id="regular">
 
-    <!-- Kloud Mini -->
-    <div class="rounded-2xl bg-[linear-gradient(to_bottom,#A890E683,#009FE383)] text-gray-900 p-6 flex flex-col items-center transform hover:scale-[1.05] transition duration-300">
-      <div class="bg-white rounded-full px-6 py-3 mb-3 w-[60%] text-center">
-        <h2 class="text-purple-800 text-xl">Kloud Mini</h2>
-        <p class="text-purple-800 text-4xl font-bold font-TitilliumWeb">35<span class="text-lg font-medium">Mbps</span></p>
+    <div class="pb-20 max-w-7xl mx-auto grid gap-20 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 transition-opacity duration-300">
+
+      <!-- Kloud Mini -->
+      <div class="rounded-2xl bg-[linear-gradient(to_bottom,#A890E683,#009FE383)] text-gray-900 p-6 flex flex-col items-center transform hover:scale-[1.05] transition duration-300">
+        <div class="bg-white rounded-full px-6 py-3 mb-3 w-[60%] text-center">
+          <h2 class="text-purple-800 text-xl">Kloud Mini</h2>
+          <p class="text-purple-800 text-4xl font-bold font-TitilliumWeb">35<span class="text-lg font-medium">Mbps</span></p>
+        </div>
+        <hr class="mb-3 w-[60%] border border-white/50">
+        <div class="bg-white/80 rounded-lg px-6 py-4 mb-6 w-full text-sm font-medium text-gray-700">
+          <h3 class="text-lg font-bold text-purple-900 mb-3">Premium Benefits</h3>
+          <ul class="space-y-2">
+            <li class="inline-flex items-center gap-4"><svg class="w-7 h-7"><use href="#icon-arrow"></use></svg> Bufferless Browsing</li>
+            <li class="inline-flex items-center gap-4"><svg class="w-7 h-7"><use href="#icon-arrow"></use></svg>  Content Server (KloudNix, BDIX)</li>
+            <li class="inline-flex items-center gap-4"><svg class="w-7 h-7"><use href="#icon-arrow"></use></svg>  24/7 Customer Support</li>
+            <li class="inline-flex items-center gap-4"><svg class="w-7 h-7"><use href="#icon-arrow"></use></svg>  IPV6 Available</li>
+            <li class="text-center">🚀 <strong class="text-black">Free Installation</strong></li>
+          </ul>
+        </div>
+        <div class="text-center mb-3">
+          <p class="text-3xl font-light font-TitilliumWeb text-white [text-shadow:-3px_4px_5px_rgba(0,0,0,0.25)]">BDT <span class="font-bold text-6xl font-TitilliumWeb ">699</span> <br><span class="">Per Month</span></p>
+          <p class="text-xs text-white italic mt-1 [text-shadow:-3px_4px_5px_rgba(0,0,0,0.25)] text-end">*excluding vat</p>
+        </div>
+        <hr class="w-[60%] border border-white/50">
+        <a href="#packageForm" data-package="Kloud Mini" class="package-btn mt-3 bg-white text-[var(--color1)] hover:text-white font-bold px-6 py-2 rounded-full border-2 border-[var(--color1)] hover:border-white hover:bg-[var(--color1)] transition-all">
+          Select this Package
+        </a>
       </div>
-      <hr class="mb-3 w-[60%] border border-white/50">
-      <div class="bg-white/80 rounded-lg px-6 py-4 mb-6 w-full text-sm font-medium text-gray-700">
-        <h3 class="text-lg font-bold text-purple-900 mb-3">Premium Benefits</h3>
-        <ul class="space-y-2">
-          <li class="inline-flex items-center gap-4"><svg class="w-7 h-7"><use href="#icon-arrow"></use></svg> Bufferless Browsing</li>
-          <li class="inline-flex items-center gap-4"><svg class="w-7 h-7"><use href="#icon-arrow"></use></svg>  Content Server (KloudNix, BDIX)</li>
-          <li class="inline-flex items-center gap-4"><svg class="w-7 h-7"><use href="#icon-arrow"></use></svg>  24/7 Customer Support</li>
-          <li class="inline-flex items-center gap-4"><svg class="w-7 h-7"><use href="#icon-arrow"></use></svg>  IPV6 Available</li>
-          <li class="text-center">🚀 <strong class="text-black">Free Installation</strong></li>
-        </ul>
+
+      <!-- Kloud Neo -->
+      <div class="rounded-2xl bg-[linear-gradient(to_bottom,#6A54A3,#007DB2)] text-white p-6 flex flex-col items-center md:scale-125 shadow-lg transform hover:scale-[1.3] transition duration-300">
+        <div class="bg-white rounded-full px-6 py-3 mb-3 w-[60%] text-center">
+          <h2 class="text-purple-800 text-xl">Kloud Neo</h2>
+          <p class="text-purple-800 text-4xl font-bold font-titillium">55<span class="text-lg font-medium">Mbps</span></p>
+        </div>
+        <hr class="mb-3 w-[60%] border border-white/50">
+        <div class="bg-white/80 rounded-lg px-6 py-4 mb-6 w-full text-sm font-medium text-gray-800">
+          <h3 class="text-lg font-bold text-purple-900 mb-3">Premium Benefits</h3>
+          <ul class="space-y-2">
+
+            <li class="inline-flex items-center gap-4">
+              <svg class="w-7 h-7"><use href="#icon-circle-arrow"></use></svg>
+              Including Kloud Mini & Stream
+            </li>
+            <li class="inline-flex items-center gap-4">
+              <svg class="w-7 h-7"><use href="#icon-circle-arrow"></use></svg>
+              Bufferless Streaming Site
+            </li>
+            <li class="inline-flex items-center gap-4">
+              <svg class="w-7 h-7"><use href="#icon-circle-arrow"></use></svg>
+              Low Latency Popular Games
+            </li>
+            <li class="inline-flex items-center gap-4">
+              <svg class="w-7 h-7"><use href="#icon-circle-arrow"></use></svg>
+              24/7 Customer Support
+            </li>
+            <li class="text-center text-xl">🚀 <strong class="text-black">Free Installation</strong></li>
+          </ul>
+        </div>
+        <div class="text-center mb-3">
+          <p class="text-3xl font-light font-TitilliumWeb text-white [text-shadow:-3px_4px_5px_rgba(0,0,0,0.25)]">BDT <span class="font-bold text-6xl font-TitilliumWeb ">999</span> <br><span class="">Per Month</span></p>
+          <p class="text-xs text-white italic mt-1 [text-shadow:-3px_4px_5px_rgba(0,0,0,0.25)] text-end">*excluding vat</p>
+        </div>
+        <hr class="w-[60%] border border-white/50">
+        <a href="#packageForm" data-package="Kloud Neo" class="package-btn mt-2 bg-white text-[var(--color1)] hover:text-white font-bold px-6 py-2 rounded-full border-2 border-[var(--color1)] hover:border-white hover:bg-[var(--color1)] transition-all">
+          Select this Package
+        </a>
       </div>
-      <div class="text-center mb-3">
-        <p class="text-3xl font-light font-TitilliumWeb text-white [text-shadow:-3px_4px_5px_rgba(0,0,0,0.25)]">BDT <span class="font-bold text-6xl font-TitilliumWeb ">699</span> <br><span class="">Per Month</span></p>
-        <p class="text-xs text-white italic mt-1 [text-shadow:-3px_4px_5px_rgba(0,0,0,0.25)] text-end">*excluding vat</p>
+
+      <!-- Kloud Stream -->
+      <div class="rounded-2xl bg-[linear-gradient(to_bottom,#A890E683,#009FE383)] text-gray-900 p-6 flex flex-col items-center transform hover:scale-[1.05] transition duration-300">
+        <div class="bg-white rounded-full px-6 py-3 mb-3 w-[60%] text-center">
+          <h2 class="text-purple-800 text-xl">Kloud Stream</h2>
+          <p class="text-purple-800 text-4xl font-bold font-titillium">45<span class="text-lg font-medium">Mbps</span></p>
+        </div>
+        <hr class="mb-3 w-[60%] border border-white/50">
+        <div class="bg-white/80 rounded-lg px-6 py-4 mb-6 w-full text-sm font-medium text-gray-700">
+          <h3 class="text-lg font-bold text-purple-900 mb-3">Premium Benefits</h3>
+          <ul class="space-y-2">
+            <li class="inline-flex items-center gap-4"><svg class="w-7 h-7"><use href="#icon-arrow"></use></svg> Including Kloud Mini</li>
+            <li class="inline-flex items-center gap-4"><svg class="w-7 h-7"><use href="#icon-arrow"></use></svg> Highspeed - KloudNix & BDIX</li>
+            <li class="inline-flex items-center gap-4"><svg class="w-7 h-7"><use href="#icon-arrow"></use></svg> 4k Streaming</li>
+            <li class="inline-flex items-center gap-4"><svg class="w-7 h-7"><use href="#icon-arrow"></use></svg> 24/7 Customer Support</li>
+            <li class="text-center">🚀 <strong class="text-black">Free Installation</strong></li>
+          </ul>
+        </div>
+        <div class="text-center mb-3">
+          <p class="text-3xl font-light font-TitilliumWeb text-white [text-shadow:-3px_4px_5px_rgba(0,0,0,0.25)]">BDT <span class="font-bold text-6xl font-TitilliumWeb ">899</span> <br><span class="">Per Month</span></p>
+          <p class="text-xs text-white italic mt-1 [text-shadow:-3px_4px_5px_rgba(0,0,0,0.25)] text-end">*excluding vat</p>
+        </div>
+        <hr class="w-[60%] border border-white/50">
+        <a href="#packageForm" data-package="Kloud Stream" class="package-btn mt-2 bg-white text-[var(--color1)] hover:text-white font-bold px-6 py-2 rounded-full border-2 border-[var(--color1)] hover:border-white hover:bg-[var(--color1)] transition-all">
+          Select this Package
+        </a>
       </div>
-      <hr class="w-[60%] border border-white/50">
-      <button class="mt-3 bg-white text-[var(--color1)] hover:text-white font-bold px-6 py-2 rounded-full border-2 border-[var(--color1)] hover:border-white hover:bg-[var(--color1)] transition-all">
-        Select this Package
-      </button>
+
     </div>
 
-    <!-- Kloud Neo -->
-    <div class="rounded-2xl bg-[linear-gradient(to_bottom,#6A54A3,#007DB2)] text-white p-6 flex flex-col items-center md:scale-125 shadow-lg transform hover:scale-[1.3] transition duration-300">
-      <div class="bg-white rounded-full px-6 py-3 mb-3 w-[60%] text-center">
-        <h2 class="text-purple-800 text-xl">Kloud Neo</h2>
-        <p class="text-purple-800 text-4xl font-bold font-titillium">55<span class="text-lg font-medium">Mbps</span></p>
+    <div class="md:pt-32 pb-20 max-w-7xl mx-auto grid gap-20 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 transition-opacity duration-300">
+      
+      <!-- Kloud Boost -->
+      <div  class="rounded-2xl bg-[linear-gradient(to_bottom,#A890E683,#009FE383)] text-gray-900 p-6 flex flex-col items-center transform hover:scale-[1.05] transition duration-300">
+        <div class="bg-white rounded-full px-6 py-3 mb-3 w-[60%] text-center">
+          <h2 class="text-purple-800 text-xl">Kloud Boost +</h2>
+          <p class="text-purple-800 text-4xl font-bold font-TitilliumWeb">75<span class="text-lg font-medium">Mbps</span></p>
+        </div>
+        <hr class="mb-3 w-[60%] border border-white/50">
+        <div class="bg-white/80 rounded-lg px-6 py-4 mb-6 w-full text-sm font-medium text-gray-700">
+          <h3 class="text-lg font-bold text-purple-900 mb-3">Premium Benefits</h3>
+          <ul class="space-y-2">
+            <li class="inline-flex items-center gap-4"><svg class="w-7 h-7"><use href="#icon-arrow"></use></svg> Bufferless Browsing</li>
+            <li class="inline-flex items-center gap-4"><svg class="w-7 h-7"><use href="#icon-arrow"></use></svg>  Content Server (KloudNix, BDIX)</li>
+            <li class="inline-flex items-center gap-4"><svg class="w-7 h-7"><use href="#icon-arrow"></use></svg>  24/7 Customer Support</li>
+            <li class="inline-flex items-center gap-4"><svg class="w-7 h-7"><use href="#icon-arrow"></use></svg>  IPV6 Available</li>
+            <li class="text-center">🚀 <strong class="text-black">Free Installation</strong></li>
+          </ul>
+        </div>
+        <div class="text-center mb-3">
+          <p class="text-3xl font-light font-TitilliumWeb text-white [text-shadow:-3px_4px_5px_rgba(0,0,0,0.25)]">BDT <span class="font-bold text-6xl font-TitilliumWeb ">1499</span> <br><span class="">Per Month</span></p>
+          <p class="text-xs text-white italic mt-1 [text-shadow:-3px_4px_5px_rgba(0,0,0,0.25)] text-end">*excluding vat</p>
+        </div>
+        <hr class="w-[60%] border border-white/50">
+        <a href="#packageForm" data-package="Kloud Boost +" class="package-btn mt-3 bg-white text-[var(--color1)] hover:text-white font-bold px-6 py-2 rounded-full border-2 border-[var(--color1)] hover:border-white hover:bg-[var(--color1)] transition-all">
+          Select this Package
+        </a>
       </div>
-      <hr class="mb-3 w-[60%] border border-white/50">
-      <div class="bg-white/80 rounded-lg px-6 py-4 mb-6 w-full text-sm font-medium text-gray-800">
-        <h3 class="text-lg font-bold text-purple-900 mb-3">Premium Benefits</h3>
-        <ul class="space-y-2">
 
-          <li class="inline-flex items-center gap-4">
-            <svg class="w-7 h-7"><use href="#icon-circle-arrow"></use></svg>
-            Including Kloud Mini & Stream
-          </li>
-          <li class="inline-flex items-center gap-4">
-            <svg class="w-7 h-7"><use href="#icon-circle-arrow"></use></svg>
-            Bufferless Streaming Site
-          </li>
-          <li class="inline-flex items-center gap-4">
-            <svg class="w-7 h-7"><use href="#icon-circle-arrow"></use></svg>
-            Low Latency Popular Games
-          </li>
-          <li class="inline-flex items-center gap-4">
-            <svg class="w-7 h-7"><use href="#icon-circle-arrow"></use></svg>
-            24/7 Customer Support
-          </li>
-          <li class="text-center text-xl">🚀 <strong class="text-black">Free Installation</strong></li>
-        </ul>
-      </div>
-      <div class="text-center mb-3">
-        <p class="text-3xl font-light font-TitilliumWeb text-white [text-shadow:-3px_4px_5px_rgba(0,0,0,0.25)]">BDT <span class="font-bold text-6xl font-TitilliumWeb ">999</span> <br><span class="">Per Month</span></p>
-        <p class="text-xs text-white italic mt-1 [text-shadow:-3px_4px_5px_rgba(0,0,0,0.25)] text-end">*excluding vat</p>
-      </div>
-      <hr class="w-[60%] border border-white/50">
-      <button class="mt-2 bg-white text-[var(--color1)] hover:text-white font-bold px-6 py-2 rounded-full border-2 border-[var(--color1)] hover:border-white hover:bg-[var(--color1)] transition-all">
-        Select this Package
-      </button>
-    </div>
+      <!-- Kloud Gamers -->
+      <div class="rounded-2xl bg-[conic-gradient(at_top,#3D0066,#5F049C,#3D0066)] text-white p-6 flex flex-col items-center md:scale-125 shadow-lg transform hover:scale-[1.3] transition duration-300">
+        <div class="bg-white rounded-full px-6 py-3 mb-3 w-[60%] text-center">
+          <h2 class="text-purple-800 text-xl">Kloud Gamers</h2>
+          <p class="text-purple-800 text-4xl font-bold font-titillium">85<span class="text-lg font-medium">Mbps</span></p>
+        </div>
+        <hr class="mb-3 w-[60%] border border-white/50">
+        <div class="bg-white/80 rounded-lg px-6 py-4 mb-6 w-full text-sm font-medium text-gray-800">
+          <h3 class="text-lg font-bold text-purple-900 mb-3">Premium Benefits</h3>
+          <ul class="space-y-2">
 
-    <!-- Kloud Stream -->
-    <div class="rounded-2xl bg-[linear-gradient(to_bottom,#A890E683,#009FE383)] text-gray-900 p-6 flex flex-col items-center transform hover:scale-[1.05] transition duration-300">
-      <div class="bg-white rounded-full px-6 py-3 mb-3 w-[60%] text-center">
-        <h2 class="text-purple-800 text-xl">Kloud Stream</h2>
-        <p class="text-purple-800 text-4xl font-bold font-titillium">45<span class="text-lg font-medium">Mbps</span></p>
+            <li class="inline-flex items-center gap-4">
+              <svg class="w-7 h-7"><use href="#icon-circle-arrow"></use></svg>
+              Including Kloud Mini & Stream
+            </li>
+            <li class="inline-flex items-center gap-4">
+              <svg class="w-7 h-7"><use href="#icon-circle-arrow"></use></svg>
+              Bufferless Streaming Site
+            </li>
+            <li class="inline-flex items-center gap-4">
+              <svg class="w-7 h-7"><use href="#icon-circle-arrow"></use></svg>
+              Low Latency Popular Games
+            </li>
+            <li class="inline-flex items-center gap-4">
+              <svg class="w-7 h-7"><use href="#icon-circle-arrow"></use></svg>
+              24/7 Customer Support
+            </li>
+            <li class="text-center text-xl">🚀 <strong class="text-black">Free Installation</strong></li>
+          </ul>
+        </div>
+        <div class="text-center mb-3">
+          <p class="text-3xl font-light font-TitilliumWeb text-white [text-shadow:-3px_4px_5px_rgba(0,0,0,0.25)]">BDT <span class="font-bold text-6xl font-TitilliumWeb ">1399</span> <br><span class="">Per Month</span></p>
+          <p class="text-xs text-white italic mt-1 [text-shadow:-3px_4px_5px_rgba(0,0,0,0.25)] text-end">*excluding vat</p>
+        </div>
+        <hr class="w-[60%] border border-white/50">
+        <a href="#packageForm" data-package="Kloud Gamers" class="package-btn mt-2 bg-white text-[var(--color1)] hover:text-white font-bold px-6 py-2 rounded-full border-2 border-[var(--color1)] hover:border-white hover:bg-[var(--color1)] transition-all">
+          Select this Package
+        </a>
       </div>
-      <hr class="mb-3 w-[60%] border border-white/50">
-      <div class="bg-white/80 rounded-lg px-6 py-4 mb-6 w-full text-sm font-medium text-gray-700">
-        <h3 class="text-lg font-bold text-purple-900 mb-3">Premium Benefits</h3>
-        <ul class="space-y-2">
-          <li class="inline-flex items-center gap-4"><svg class="w-7 h-7"><use href="#icon-arrow"></use></svg> Including Kloud Mini</li>
-          <li class="inline-flex items-center gap-4"><svg class="w-7 h-7"><use href="#icon-arrow"></use></svg> Highspeed - KloudNix & BDIX</li>
-          <li class="inline-flex items-center gap-4"><svg class="w-7 h-7"><use href="#icon-arrow"></use></svg> 4k Streaming</li>
-          <li class="inline-flex items-center gap-4"><svg class="w-7 h-7"><use href="#icon-arrow"></use></svg> 24/7 Customer Support</li>
-          <li class="text-center">🚀 <strong class="text-black">Free Installation</strong></li>
-        </ul>
-      </div>
-      <div class="text-center mb-3">
-        <p class="text-3xl font-light font-TitilliumWeb text-white [text-shadow:-3px_4px_5px_rgba(0,0,0,0.25)]">BDT <span class="font-bold text-6xl font-TitilliumWeb ">899</span> <br><span class="">Per Month</span></p>
-        <p class="text-xs text-white italic mt-1 [text-shadow:-3px_4px_5px_rgba(0,0,0,0.25)] text-end">*excluding vat</p>
-      </div>
-      <hr class="w-[60%] border border-white/50">
-      <button class="mt-2 bg-white text-[var(--color1)] hover:text-white font-bold px-6 py-2 rounded-full border-2 border-[var(--color1)] hover:border-white hover:bg-[var(--color1)] transition-all">
-        Select this Package
-      </button>
-    </div>
 
-  </section>
+      <!-- Kloud Edge  -->
+      <div class="rounded-2xl bg-[linear-gradient(to_bottom,#A890E683,#009FE383)] text-gray-900 p-6 flex flex-col items-center transform hover:scale-[1.05] transition duration-300">
+        <div class="bg-white rounded-full px-6 py-3 mb-3 w-[60%] text-center">
+          <h2 class="text-purple-800 text-xl">Kloud Edge</h2>
+          <p class="text-purple-800 text-4xl font-bold font-titillium">100<span class="text-lg font-medium">Mbps</span></p>
+        </div>
+        <hr class="mb-3 w-[60%] border border-white/50">
+        <div class="bg-white/80 rounded-lg px-6 py-4 mb-6 w-full text-sm font-medium text-gray-700">
+          <h3 class="text-lg font-bold text-purple-900 mb-3">Premium Benefits</h3>
+          <ul class="space-y-2">
+            <li class="inline-flex items-center gap-4"><svg class="w-7 h-7"><use href="#icon-arrow"></use></svg> Including Kloud Mini</li>
+            <li class="inline-flex items-center gap-4"><svg class="w-7 h-7"><use href="#icon-arrow"></use></svg> Highspeed - KloudNix & BDIX</li>
+            <li class="inline-flex items-center gap-4"><svg class="w-7 h-7"><use href="#icon-arrow"></use></svg> 4k Streaming</li>
+            <li class="inline-flex items-center gap-4"><svg class="w-7 h-7"><use href="#icon-arrow"></use></svg> 24/7 Customer Support</li>
+            <li class="text-center">🚀 <strong class="text-black">Free Installation</strong></li>
+          </ul>
+        </div>
+        <div class="text-center mb-3">
+          <p class="text-3xl font-light font-TitilliumWeb text-white [text-shadow:-3px_4px_5px_rgba(0,0,0,0.25)]">BDT <span class="font-bold text-6xl font-TitilliumWeb ">1899</span> <br><span class="">Per Month</span></p>
+          <p class="text-xs text-white italic mt-1 [text-shadow:-3px_4px_5px_rgba(0,0,0,0.25)] text-end">*excluding vat</p>
+        </div>
+        <hr class="w-[60%] border border-white/50">
+        <a href="#packageForm" data-package="Kloud Edge" class="package-btn mt-2 bg-white text-[var(--color1)] hover:text-white font-bold px-6 py-2 rounded-full border-2 border-[var(--color1)] hover:border-white hover:bg-[var(--color1)] transition-all">
+          Select this Package
+        </a>
+      </div>
 
-  <section id="regular" class="md:pt-32 max-w-7xl mx-auto grid gap-20 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 transition-opacity duration-300">
-
-    <!-- Kloud Boost -->
-    <div class="rounded-2xl bg-[linear-gradient(to_bottom,#A890E683,#009FE383)] text-gray-900 p-6 flex flex-col items-center transform hover:scale-[1.05] transition duration-300">
-      <div class="bg-white rounded-full px-6 py-3 mb-3 w-[60%] text-center">
-        <h2 class="text-purple-800 text-xl">Kloud Boost +</h2>
-        <p class="text-purple-800 text-4xl font-bold font-TitilliumWeb">75<span class="text-lg font-medium">Mbps</span></p>
-      </div>
-      <hr class="mb-3 w-[60%] border border-white/50">
-      <div class="bg-white/80 rounded-lg px-6 py-4 mb-6 w-full text-sm font-medium text-gray-700">
-        <h3 class="text-lg font-bold text-purple-900 mb-3">Premium Benefits</h3>
-        <ul class="space-y-2">
-          <li class="inline-flex items-center gap-4"><svg class="w-7 h-7"><use href="#icon-arrow"></use></svg> Bufferless Browsing</li>
-          <li class="inline-flex items-center gap-4"><svg class="w-7 h-7"><use href="#icon-arrow"></use></svg>  Content Server (KloudNix, BDIX)</li>
-          <li class="inline-flex items-center gap-4"><svg class="w-7 h-7"><use href="#icon-arrow"></use></svg>  24/7 Customer Support</li>
-          <li class="inline-flex items-center gap-4"><svg class="w-7 h-7"><use href="#icon-arrow"></use></svg>  IPV6 Available</li>
-          <li class="text-center">🚀 <strong class="text-black">Free Installation</strong></li>
-        </ul>
-      </div>
-      <div class="text-center mb-3">
-        <p class="text-3xl font-light font-TitilliumWeb text-white [text-shadow:-3px_4px_5px_rgba(0,0,0,0.25)]">BDT <span class="font-bold text-6xl font-TitilliumWeb ">1499</span> <br><span class="">Per Month</span></p>
-        <p class="text-xs text-white italic mt-1 [text-shadow:-3px_4px_5px_rgba(0,0,0,0.25)] text-end">*excluding vat</p>
-      </div>
-      <hr class="w-[60%] border border-white/50">
-      <button class="mt-3 bg-white text-[var(--color1)] hover:text-white font-bold px-6 py-2 rounded-full border-2 border-[var(--color1)] hover:border-white hover:bg-[var(--color1)] transition-all">
-        Select this Package
-      </button>
-    </div>
-
-    <!-- Kloud Gamers -->
-    <div class="rounded-2xl bg-[conic-gradient(at_top,#3D0066,#5F049C,#3D0066)] text-white p-6 flex flex-col items-center md:scale-125 shadow-lg transform hover:scale-[1.3] transition duration-300">
-      <div class="bg-white rounded-full px-6 py-3 mb-3 w-[60%] text-center">
-        <h2 class="text-purple-800 text-xl">Kloud Gamers</h2>
-        <p class="text-purple-800 text-4xl font-bold font-titillium">85<span class="text-lg font-medium">Mbps</span></p>
-      </div>
-      <hr class="mb-3 w-[60%] border border-white/50">
-      <div class="bg-white/80 rounded-lg px-6 py-4 mb-6 w-full text-sm font-medium text-gray-800">
-        <h3 class="text-lg font-bold text-purple-900 mb-3">Premium Benefits</h3>
-        <ul class="space-y-2">
-
-          <li class="inline-flex items-center gap-4">
-            <svg class="w-7 h-7"><use href="#icon-circle-arrow"></use></svg>
-            Including Kloud Mini & Stream
-          </li>
-          <li class="inline-flex items-center gap-4">
-            <svg class="w-7 h-7"><use href="#icon-circle-arrow"></use></svg>
-            Bufferless Streaming Site
-          </li>
-          <li class="inline-flex items-center gap-4">
-            <svg class="w-7 h-7"><use href="#icon-circle-arrow"></use></svg>
-            Low Latency Popular Games
-          </li>
-          <li class="inline-flex items-center gap-4">
-            <svg class="w-7 h-7"><use href="#icon-circle-arrow"></use></svg>
-            24/7 Customer Support
-          </li>
-          <li class="text-center text-xl">🚀 <strong class="text-black">Free Installation</strong></li>
-        </ul>
-      </div>
-      <div class="text-center mb-3">
-        <p class="text-3xl font-light font-TitilliumWeb text-white [text-shadow:-3px_4px_5px_rgba(0,0,0,0.25)]">BDT <span class="font-bold text-6xl font-TitilliumWeb ">1399</span> <br><span class="">Per Month</span></p>
-        <p class="text-xs text-white italic mt-1 [text-shadow:-3px_4px_5px_rgba(0,0,0,0.25)] text-end">*excluding vat</p>
-      </div>
-      <hr class="w-[60%] border border-white/50">
-      <button class="mt-2 bg-white text-[var(--color1)] hover:text-white font-bold px-6 py-2 rounded-full border-2 border-[var(--color1)] hover:border-white hover:bg-[var(--color1)] transition-all">
-        Select this Package
-      </button>
-    </div>
-
-    <!-- Kloud Edge  -->
-    <div class="rounded-2xl bg-[linear-gradient(to_bottom,#A890E683,#009FE383)] text-gray-900 p-6 flex flex-col items-center transform hover:scale-[1.05] transition duration-300">
-      <div class="bg-white rounded-full px-6 py-3 mb-3 w-[60%] text-center">
-        <h2 class="text-purple-800 text-xl">Kloud Edge</h2>
-        <p class="text-purple-800 text-4xl font-bold font-titillium">100<span class="text-lg font-medium">Mbps</span></p>
-      </div>
-      <hr class="mb-3 w-[60%] border border-white/50">
-      <div class="bg-white/80 rounded-lg px-6 py-4 mb-6 w-full text-sm font-medium text-gray-700">
-        <h3 class="text-lg font-bold text-purple-900 mb-3">Premium Benefits</h3>
-        <ul class="space-y-2">
-          <li class="inline-flex items-center gap-4"><svg class="w-7 h-7"><use href="#icon-arrow"></use></svg> Including Kloud Mini</li>
-          <li class="inline-flex items-center gap-4"><svg class="w-7 h-7"><use href="#icon-arrow"></use></svg> Highspeed - KloudNix & BDIX</li>
-          <li class="inline-flex items-center gap-4"><svg class="w-7 h-7"><use href="#icon-arrow"></use></svg> 4k Streaming</li>
-          <li class="inline-flex items-center gap-4"><svg class="w-7 h-7"><use href="#icon-arrow"></use></svg> 24/7 Customer Support</li>
-          <li class="text-center">🚀 <strong class="text-black">Free Installation</strong></li>
-        </ul>
-      </div>
-      <div class="text-center mb-3">
-        <p class="text-3xl font-light font-TitilliumWeb text-white [text-shadow:-3px_4px_5px_rgba(0,0,0,0.25)]">BDT <span class="font-bold text-6xl font-TitilliumWeb ">1899</span> <br><span class="">Per Month</span></p>
-        <p class="text-xs text-white italic mt-1 [text-shadow:-3px_4px_5px_rgba(0,0,0,0.25)] text-end">*excluding vat</p>
-      </div>
-      <hr class="w-[60%] border border-white/50">
-      <button class="mt-2 bg-white text-[var(--color1)] hover:text-white font-bold px-6 py-2 rounded-full border-2 border-[var(--color1)] hover:border-white hover:bg-[var(--color1)] transition-all">
-        Select this Package
-      </button>
     </div>
 
   </section>
@@ -538,28 +551,34 @@
 
 
 
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800, 
+    once: true 
+  });
+</script>
 
-
-
+<section >
+  <h1 class="text-6xl text-center mt-32">Hello World</h1>
+</section>
 
 
 
   <!-- Testing Section -->
-  <section class="mt-32 relative w-full h-[50vh] md:h-[60vh] lg:h-[70vh] bg-cover bg-center flex items-center justify-center px-6" style="background-image: url('./assets/img/Wifi-background\ 1.png');" >
-    <!-- Content Wrapper -->
+  <!-- <section class="mt-32 relative w-full h-[50vh] md:h-[60vh] lg:h-[70vh] bg-cover bg-center flex items-center justify-center px-6" style="background-image: url('./assets/img/Wifi-background\ 1.png');" >
+
     <div class="max-w-6xl w-full flex flex-col md:flex-row items-center justify-between text-white">
-      
-      <!-- Left Text -->
+
       <div class="text-center md:text-left mb-8 md:mb-0">
         <h1 class="text-3xl md:text-5xl font-bold">Check your current Speed</h1>
       </div>
 
-      <!-- Right Icon & Button -->
       <div class="flex flex-col items-center">
-        <!-- Speedometer Icon -->
+
         <img src="./assets/img/Vector.png" alt="Speedometer" class="w-48 md:w-64 mb-4">
 
-        <!-- Start Button -->
         <button 
           class="bg-white text-[var(--color1)] font-bold px-6 py-2 rounded-full shadow-lg hover:bg-blue-100 transition"
         >
@@ -568,6 +587,19 @@
       </div>
 
     </div>
+  </section> -->
+
+
+<!-- <iframe style="border:none;position:absolute;top:0;left:0;width:100%;height:100%;min-height:360px;border:none;overflow:hidden !important;" src="//openspeedtest.com/speedtest"></iframe> -->
+<!-- <iframe style="border:none;position:absolute;top:0;left:0;width:100%;height:100%;min-height:360px;border:none;overflow:hidden !important;" src="//openspeedtest.com/speedtest?Run=10"></iframe> -->
+<!-- <iframe src="https://speedtest.net" width="100%" height="500" frameborder="0"></iframe> -->
+
+  <section class="mt-32">
+    <iframe 
+        src="https://openspeedtest.com/speedtest" 
+        style="border:none; width:100%; height:500px; overflow:hidden;" 
+        allow="autoplay; fullscreen">
+    </iframe>
   </section>
 
 
@@ -658,8 +690,8 @@
 
 
 
-  <!-- SPEED TEST START  -->
-  <div class="max-w-7xl mx-auto px-4 py-10" data-aos="fade-up" data-aos-delay="300">
+  <!-- PackageForm START  -->
+  <div id="packageForm" class="max-w-7xl mx-auto px-4 py-10" data-aos="fade-up" data-aos-delay="300">
 
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-white rounded-2xl shadow-lg overflow-hidden">
@@ -724,10 +756,14 @@
           <!-- Packages -->
           <div>
             <label for="" class="text-[var(--color1)] font-bold">Select Packages</label>
-            <select class="w-full px-4 py-2 mt-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+            <select id="packageSelect" class="w-full px-4 py-2 mt-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
               <option>---Choose the packages---</option>
-              <option>Package 1</option>
-              <option>Package 2</option>
+              <option>Kloud Mini</option>
+              <option>Kloud Neo</option>
+              <option>Kloud Stream</option>
+              <option>Kloud Boost +</option>
+              <option>Kloud Gamers</option>
+              <option>Kloud Edge</option>
             </select>
           </div>
 
@@ -736,6 +772,27 @@
             class="w-full bg-[var(--color1)] text-white py-2 rounded-lg hover:bg-blue-700 transition">
             Order Now
           </button>
+
+<!-- Script -->
+<script>
+  // Smooth scroll + set package
+  document.querySelectorAll('.package-btn').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+
+      const target = document.querySelector(this.getAttribute('href'));
+      const packageName = this.dataset.package;
+
+      // Scroll smoothly
+      target.scrollIntoView({ behavior: 'smooth' });
+
+      // Set select value
+      const select = document.getElementById('packageSelect');
+      select.value = packageName;
+    });
+  });
+</script>
+
         </form>
       </div>
 
@@ -803,12 +860,50 @@
 
         <!-- Circle Orbit -->
         <div class="orbit">
+
+<!-- 
+<svg class="icon1" width="60" height="60" viewBox="0 0 107 111" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M53.5693 110.933C82.7972 110.933 106.491 86.3171 106.491 55.9523C106.491 25.5875 82.7972 0.971924 53.5693 0.971924C24.3414 0.971924 0.647461 25.5875 0.647461 55.9523C0.647461 86.3171 24.3414 110.933 53.5693 110.933Z" fill="white"/>
+<path d="M24.0568 25.5413C23.843 25.8282 23.6293 26.1118 23.432 26.4192C19.1211 33.1218 20.8606 42.1816 27.3122 46.6602C33.7606 51.1355 42.4811 49.3317 46.7921 42.6291C46.9894 42.3217 47.1604 42.0074 47.3314 41.6931L24.0601 25.5413H24.0568Z" fill="#009FE3"/>
+<path d="M65.9103 58.1489C65.6932 58.4359 65.4795 58.7194 65.2855 59.0269C60.9745 65.7295 62.7075 74.7893 69.1624 79.2679C75.614 83.7397 84.3346 81.9394 88.6422 75.2368C88.8395 74.9293 89.0105 74.615 89.1815 74.3007L65.9103 58.1523V58.1489Z" fill="#009FE3"/>
+<path d="M32.7215 37.2894C32.7215 37.2894 38.8509 52.1909 49.3603 60.2634C59.8664 68.3393 74.5158 70.3241 74.5158 70.3241L81.5659 80.8699C81.5659 80.8699 63.2435 88.6042 44.3917 74.485C21.8734 57.6124 21.2552 36.5173 21.2552 36.5173L32.7248 37.2928L32.7215 37.2894Z" fill="#009FE3"/>
+<path d="M47.532 40.6613C48.4198 41.3274 48.6434 42.5812 48.0318 43.4557C47.4202 44.3337 46.2035 44.5045 45.319 43.8349L23.1 27.1194C22.2121 26.4499 21.9918 25.1995 22.5968 24.3216C23.2118 23.447 24.4251 23.2762 25.3163 23.9424L47.532 40.6613Z" fill="#009FE3"/>
+<path d="M89.6847 72.3807C90.589 73.0263 90.8421 74.2732 90.2535 75.1615C89.6649 76.0531 88.4549 76.2581 87.5506 75.6158L64.9304 59.4948C64.0228 58.8491 63.7696 57.6022 64.3582 56.714C64.9501 55.8223 66.1602 55.6208 67.0612 56.263L89.6847 72.3807Z" fill="#009FE3"/>
+</svg>
+
+<svg class="icon2" width="66" height="66" viewBox="0 0 107 111" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M106.662 55.9784C106.662 86.3485 82.963 110.969 53.7301 110.969C24.4971 110.969 0.79834 86.3485 0.79834 55.9784C0.79834 25.6084 24.4971 0.987793 53.7301 0.987793C82.963 0.987793 106.662 25.6084 106.662 55.9784Z" fill="white"/>
+<path d="M61.2668 31.3443C67.6001 41.1795 65.0615 54.4857 55.5945 61.0687C46.1308 67.6483 33.3196 65.011 26.9863 55.1792C20.6531 45.3439 23.1916 32.0378 32.6553 25.4548C42.1223 18.8752 54.9336 21.5125 61.2668 31.3443Z" fill="#009FE3"/>
+<path d="M76.4818 87.1412L58.9716 59.9551L53.5032 63.7573L71.066 91.0254C71.066 91.0254 71.0758 91.046 71.0824 91.0562C72.0426 92.5457 74.0517 92.9009 75.5644 91.8488C77.0803 90.7966 77.5275 88.7332 76.5673 87.2437C76.5443 87.2061 76.5114 87.1788 76.4851 87.1412H76.4818Z" fill="#009FE3"/>
+<path d="M60.3986 58.6878C61.0366 59.6819 60.7834 61.0244 59.8265 61.6906L54.1739 65.6192C53.217 66.2854 51.9247 66.0189 51.2835 65.0248C50.6423 64.0307 50.8988 62.6882 51.8557 62.022L57.5082 58.0934C58.4651 57.4272 59.7574 57.6937 60.3986 58.6878Z" fill="#009FE3"/>
+<path d="M56.5251 34.6411C61.109 41.7536 59.2708 51.3838 52.4213 56.1426C45.5718 60.9014 36.3086 58.9952 31.7247 51.8792C27.1409 44.7632 28.979 35.1364 35.8285 30.3776C42.6781 25.6154 51.9412 27.5217 56.5251 34.6376V34.6411Z" fill="white"/>
+<path d="M50.1327 32.5026C52.2208 35.7446 51.6289 39.9636 48.8108 41.9245C45.9894 43.8854 42.0106 42.8469 39.9225 39.6015C37.8345 36.3595 38.4264 32.1405 41.2477 30.1796C44.0658 28.2221 48.0479 29.2606 50.136 32.506L50.1327 32.5026Z" fill="#F2F2F2"/>
+</svg>
+
+<svg class="icon3" width="66" height="66" viewBox="0 0 128 94" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M114.857 0.525635H13.1269C5.8771 0.525635 0 6.63135 0 14.1631V65.3003C0 72.8321 5.8771 78.9378 13.1269 78.9378H114.857C122.107 78.9378 127.984 72.8321 127.984 65.3003V14.1631C127.984 6.63135 122.107 0.525635 114.857 0.525635Z" fill="white"/>
+<path d="M109.388 67.5754L121.42 93.7128L82.0397 69.8506L109.388 67.5754Z" fill="white"/>
+<path d="M43.7311 36.9048C43.7311 43.1735 38.8381 48.2568 32.8041 48.2568C26.7701 48.2568 21.8771 43.1735 21.8771 36.9048C21.8771 30.636 26.7701 25.5527 32.8041 25.5527C38.8381 25.5527 43.7311 30.636 43.7311 36.9048Z" fill="#009FE3"/>
+<path d="M75.5158 36.9048C75.5158 43.1735 70.6261 48.2568 64.5888 48.2568C58.5514 48.2568 53.665 43.1735 53.665 36.9048C53.665 30.636 58.5547 25.5527 64.5888 25.5527C70.6228 25.5527 75.5158 30.636 75.5158 36.9048Z" fill="#009FE3"/>
+<path d="M108.293 36.9048C108.293 43.1735 103.404 48.2568 97.3665 48.2568C91.3292 48.2568 86.4427 43.1735 86.4427 36.9048C86.4427 30.636 91.3324 25.5527 97.3665 25.5527C103.4 25.5527 108.293 30.636 108.293 36.9048Z" fill="#009FE3"/>
+</svg>
+
+<svg class="icon4" width="66" height="66" viewBox="0 0 106 111" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M106 55.8119C106 86.182 82.3011 110.803 53.0682 110.803C23.8352 110.803 0.136475 86.182 0.136475 55.8119C0.136475 25.4419 23.8352 0.821289 53.0682 0.821289C82.3011 0.821289 106 25.4419 106 55.8119Z" fill="white"/>
+<path d="M52.6506 23.498C64.7746 23.498 72.285 29.4183 72.285 39.9471C72.285 54.1414 58.3492 56.0203 58.3492 67.0205H46.3141C46.3141 52.546 57.4417 51.6988 57.4417 42.6732C57.4417 38.7241 55.0905 36.9374 51.1084 36.9374C46.6758 36.9374 44.3213 39.6635 44.2326 45.3037H31.8357C31.9278 31.4851 39.7079 23.4946 52.6473 23.4946L52.6506 23.498ZM59.8882 82.2465C59.8882 87.0394 56.6295 90.4249 52.1081 90.4249C47.5866 90.4249 44.4167 87.0394 44.4167 82.2465C44.4167 77.4536 47.5834 74.1638 52.1081 74.1638C56.6327 74.1638 59.8882 77.4536 59.8882 82.2465Z" fill="#009FE3"/>
+</svg> 
+-->
+
+
+
           <i class="icon1 fas fa-phone text-5xl text-white rounded-xl"></i>
           <i class="icon2 fa-solid fa-question text-5xl text-white rounded-xl"></i> 
           <i class="icon3 fas fa-cog text-5xl text-white rounded-xl"></i>
           <i class="icon4 fas fa-search text-5xl text-white rounded-xl"></i>
           <i class="icon5 fas fa-comment-dots text-5xl text-white rounded-xl"></i>
-          <i class="icon6 fas fa-microphone text-5xl text-white rounded-xl"></i>
+          <i class="icon6 fas fa-microphone text-5xl text-white rounded-xl"></i> 
+
+
         </div>
         <!-- <div class="orbit">
           <i class="icon1 fas fa-phone text-4xl text-[var(--color1)] bg-white rounded-xl"></i>
@@ -824,12 +919,12 @@
           <span class="text-5xl font-bold text-[var(--color1)]" style="font-family: 'Montserrat';">24/7</span>
         </div>
 
-        <p class="absolute bottom-20 text-white text-2xl font-semibold">24/7 Customer Support</p>
+        <p class="absolute bottom-8 text-white text-2xl font-semibold">24/7 Customer Support</p>
       </div>
 
     </div>
   </div>
-  <!-- SPEED TEST END  -->
+  <!-- PackageForm END  -->
 
 
 
